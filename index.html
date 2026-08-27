@@ -1,96 +1,257 @@
-<!doctype html>
+      <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sorry from assistant sab 😭</title>
+<title>Sorry from Assistant Sab 😭</title>
+
 <style>
-  *{box-sizing:border-box}
-  body{
-    margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
-    font-family:Arial,sans-serif; color:#3b2630;
-    background:linear-gradient(135deg,#ffe4ec,#f5e7ff,#e2f0ff);
-    padding:20px; overflow:hidden;
-  }
-  .card{
-    width:min(430px,100%); background:rgba(255,255,255,.88);
-    border-radius:28px; padding:28px 22px; text-align:center;
-    box-shadow:0 18px 60px rgba(90,40,70,.18);
-    position:relative;
-  }
-  .heart{font-size:52px; animation:beat 1.2s infinite}
-  @keyframes beat{50%{transform:scale(1.12)}}
-  h1{margin:8px 0;font-size:28px}
-  p{line-height:1.6;font-size:16px}
-  .hidden{display:none}
-  button{
-    border:0; border-radius:999px; padding:13px 20px; margin:7px;
-    font-size:15px; cursor:pointer; background:#7c4dff; color:white;
-    box-shadow:0 8px 18px rgba(124,77,255,.2);
-  }
-  button.alt{background:#f3dbe5;color:#6b394d}
-  .progress{font-size:13px;opacity:.65;margin-bottom:12px}
-  .final{font-size:17px}
-  .small{font-size:13px;opacity:.7}
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:Arial,sans-serif;
+  color:#3b2630;
+  background:linear-gradient(135deg,#ffe4ec,#f5e7ff,#e2f0ff);
+  padding:20px;
+  overflow:hidden;
+}
+
+.card{
+  width:min(430px,100%);
+  background:rgba(255,255,255,.9);
+  border-radius:28px;
+  padding:28px 22px;
+  text-align:center;
+  box-shadow:0 18px 60px rgba(90,40,70,.18);
+  position:relative;
+}
+
+.heart{
+  font-size:52px;
+  animation:beat 1.2s infinite;
+}
+
+@keyframes beat{
+  50%{transform:scale(1.12)}
+}
+
+h1{
+  margin:8px 0;
+  font-size:28px;
+}
+
+p{
+  line-height:1.6;
+  font-size:16px;
+}
+
+.hidden{
+  display:none;
+}
+
+button{
+  border:0;
+  border-radius:999px;
+  padding:13px 20px;
+  margin:7px;
+  font-size:15px;
+  cursor:pointer;
+  background:#7c4dff;
+  color:white;
+  box-shadow:0 8px 18px rgba(124,77,255,.2);
+}
+
+button.alt{
+  background:#f3dbe5;
+  color:#6b394d;
+}
+
+.progress{
+  font-size:13px;
+  opacity:.65;
+  margin-bottom:12px;
+}
+
+.final{
+  font-size:17px;
+}
+
+.small{
+  font-size:15px;
+  font-weight:bold;
+  margin-top:18px;
+}
+
+.success{
+  animation:pop .5s ease;
+}
+
+@keyframes pop{
+  0%{transform:scale(.7);opacity:0}
+  100%{transform:scale(1);opacity:1}
+}
 </style>
 </head>
+
 <body>
+
 <div class="card">
+
+  <!-- START -->
   <div id="screen1">
     <div class="heart">🥺</div>
+
     <h1>Ek Chhota Sa Mission...</h1>
-    <p>Mujhe tumse ek baat kehni hai.<br>Bas <b>3 levels</b> complete karne hain. 👀</p>
-    <button onclick="show(2)">Start Mission 🚀</button>
+
+    <p>
+      Mujhe tumse ek baat kehni hai.<br>
+      Bas <b>3 levels</b> complete karne hain. 👀
+    </p>
+
+    <button onclick="show(2)">
+      Start Mission 🚀
+    </button>
   </div>
 
+
+  <!-- LEVEL 1 -->
   <div id="screen2" class="hidden">
+
     <div class="progress">LEVEL 1 / 3</div>
+
     <h1>Honest Answer 👀</h1>
-    <p>Agar koi tumhein hurt kar de aur phir genuinely regret kare...</p>
-    <button onclick="show(3)">Usay ek chance 🥺</button>
-    <button class="alt" onclick="show(3)">Pehle thora attitude 😑</button>
+
+    <p>
+      Agar koi tumhein hurt kar de aur phir genuinely regret kare...
+    </p>
+
+    <button onclick="show(3)">
+      Usay ek chance 🥺
+    </button>
+
+    <button class="alt" onclick="show(3)">
+      Pehle thora attitude 😑
+    </button>
+
   </div>
 
+
+  <!-- LEVEL 2 -->
   <div id="screen3" class="hidden">
+
     <div class="progress">LEVEL 2 / 3</div>
+
     <h1>Important Question 💭</h1>
-    <p>Kya ek sincere <b>“sorry”</b> kabhi kabhi dil ki narazgi thori kam kar sakta hai?</p>
-    <button onclick="show(4)">Haan 🥹</button>
-    <button class="alt" onclick="show(4)">Sochna padega 😭</button>
+
+    <p>
+      Kya ek sincere <b>"sorry"</b> kabhi kabhi
+      dil ki narazgi thori kam kar sakta hai?
+    </p>
+
+    <button onclick="show(4)">
+      Haan 🥹
+    </button>
+
+    <button class="alt" onclick="show(4)">
+      Sochna padega 😭
+    </button>
+
   </div>
 
+
+  <!-- FINAL -->
   <div id="screen4" class="hidden">
+
     <div class="progress">FINAL LEVEL / 3</div>
+
     <h1>Okay... No More Games. ❤️‍🩹</h1>
+
     <p class="final">
-      Asal mein ye game sirf tum tak ek baat pohanchane ka bahana tha.
+
+      Asal mein ye game sirf tum tak ek baat
+      pohanchane ka bahana tha.
+
       <br><br>
+
       <b>Mujhse ghalti hui, aur mujhe genuinely afsos hai.</b>
+
       <br><br>
-      Main koi bahana nahi banaunga. Bas dil se keh raha hoon:
+
+      Main koi bahana nahi banaunga.
+      Bas dil se keh raha hoon:
+
       <br><br>
+
       <b>I'm really sorry. 🥺❤️‍🩹</b>
+
       <br><br>
+
       Agar tum abhi naraz ho to main samajh sakta hoon...
       bas umeed hai ek din tum mujhe maaf kar dogi. 🫂
+
     </p>
-    <button onclick="forgive()">Maaf kiya 🥹💗</button>
-    <button class="alt" onclick="notYet()">Abhi nahi 😭</button>
+
+    <button onclick="forgive()">
+      Maaf kiya 🥹💗
+    </button>
+
+    <button class="alt" onclick="notYet()">
+      Abhi nahi 😭
+    </button>
+
     <p id="reply" class="small"></p>
+
   </div>
+
 </div>
 
+
 <script>
+
 function show(n){
-  for(let i=1;i<=4;i++) document.getElementById("screen"+i).classList.add("hidden");
-  document.getElementById("screen"+n).classList.remove("hidden");
+
+  for(let i=1;i<=4;i++){
+    document
+      .getElementById("screen"+i)
+      .classList.add("hidden");
+  }
+
+  document
+    .getElementById("screen"+n)
+    .classList.remove("hidden");
 }
+
+
 function forgive(){
-  document.getElementById("reply").textContent="Mission Successful! 🥹❤️‍🩹 Thank you.";
+
+  const reply = document.getElementById("reply");
+
+  reply.innerHTML =
+    "Thank you much Cute Prime Minister Saiba 😭💗<br><br>" +
+    "Mission Successful! 🥹❤️‍🩹";
+
+  reply.classList.add("success");
 }
+
+
 function notYet(){
-  document.getElementById("reply").textContent="Theek hai... main pressure nahi dunga. Bas sorry dil se thi. 🥺";
+
+  const reply = document.getElementById("reply");
+
+  reply.innerHTML =
+    "Last time please... 🥺😭<br>" +
+    "Sach mein dil se sorry thi. ❤️‍🩹";
+
+  reply.classList.add("success");
 }
+
 </script>
+
 </body>
 </html>
+      
