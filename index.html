@@ -1,12 +1,17 @@
-      <!doctype html>
+          
+    <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sorry from Assistant Sab 😭</title>
+
+<title>Sorry from Assistant Sab</title>
 
 <style>
-*{box-sizing:border-box}
+
+*{
+  box-sizing:border-box;
+}
 
 body{
   margin:0;
@@ -14,72 +19,262 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
+  padding:18px;
+
   font-family:Arial,sans-serif;
-  color:#3b2630;
-  background:linear-gradient(135deg,#ffe4ec,#f5e7ff,#e2f0ff);
-  padding:20px;
-  overflow:hidden;
+  color:#30232a;
+
+  background:
+    linear-gradient(rgba(255,255,255,.72),rgba(255,255,255,.72)),
+    repeating-linear-gradient(
+      0deg,
+      #f4eee7 0px,
+      #f4eee7 31px,
+      #e5d9ce 32px
+    );
+
+  overflow:auto;
 }
 
-..card{
-  width:min(430px,100%);
-  background:rgba(255,255,255,.9);
+
+/* MAIN PAPER */
+
+.card{
+  width:min(405px,100%);
+  max-height:94vh;
+  overflow-y:auto;
+
+  background:#fffdf9;
+
+  border-radius:8px;
+
+  padding:28px 21px 25px;
+
+  text-align:center;
+
+  position:relative;
+
+  border:1px solid #e4d9ce;
+
+  box-shadow:
+    0 14px 35px rgba(60,40,40,.16),
+    0 2px 5px rgba(60,40,40,.08);
+
+  transform:rotate(-.3deg);
 }
+
+
+/* PAPER CORNER */
+
+.card:before{
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+
+  width:0;
+  height:0;
+
+  border-top:42px solid #eadfd5;
+  border-left:42px solid transparent;
+}
+
+
+/* TOP LINE */
+
+.top-line{
+  width:75px;
+  height:3px;
+
+  margin:0 auto 16px;
+
+  background:#8c6876;
+
+  border-radius:20px;
+}
+
+
+/* HEART */
 
 .heart{
-  font-size:52px;
-  animation:beat 1.2s infinite;
+  font-size:48px;
+  animation:beat 1.3s infinite;
 }
 
 @keyframes beat{
-  50%{transform:scale(1.12)}
+  50%{
+    transform:scale(1.12);
+  }
 }
 
+
+/* HEADINGS */
+
 h1{
-  margin:8px 0;
-  font-size:28px;
+  margin:8px 0 12px;
+  font-size:26px;
+  letter-spacing:.2px;
 }
 
 p{
-  line-height:1.6;
-  font-size:16px;
+  line-height:1.65;
+  font-size:15.5px;
 }
 
-.hidden{
-  display:none;
+
+/* QUESTION BOX */
+
+.question-box{
+
+  margin:18px 0;
+
+  padding:17px 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,245,248,.95),
+      rgba(248,242,255,.95)
+    );
+
+  border:1px dashed #b99baa;
+
+  border-radius:17px;
+
+  box-shadow:
+    inset 0 0 0 5px rgba(255,255,255,.55),
+    0 7px 18px rgba(90,50,70,.08);
+
+  position:relative;
 }
+
+.question-box:before{
+  content:"";
+  position:absolute;
+
+  top:-7px;
+  left:25px;
+
+  width:42px;
+  height:13px;
+
+  background:#ead7df;
+
+  transform:rotate(-4deg);
+
+  opacity:.8;
+}
+
+
+/* BUTTONS */
 
 button{
   border:0;
-  border-radius:999px;
-  padding:13px 20px;
-  margin:7px;
+
+  border-radius:14px;
+
+  padding:12px 18px;
+
+  margin:6px 3px;
+
   font-size:15px;
+
   cursor:pointer;
-  background:#7c4dff;
+
+  background:#725568;
+
   color:white;
-  box-shadow:0 8px 18px rgba(124,77,255,.2);
+
+  box-shadow:0 6px 14px rgba(80,50,70,.15);
+
+  transition:.2s;
+}
+
+button:hover{
+  transform:translateY(-2px);
+}
+
+button:active{
+  transform:scale(.96);
 }
 
 button.alt{
-  background:#f3dbe5;
-  color:#6b394d;
+  background:#eee3e7;
+  color:#553d48;
 }
+
+
+/* PROGRESS */
 
 .progress{
-  font-size:13px;
-  opacity:.65;
-  margin-bottom:12px;
+  display:inline-block;
+
+  padding:6px 12px;
+
+  border-radius:20px;
+
+  background:#eee5e9;
+
+  color:#604753;
+
+  font-size:12px;
+
+  margin-bottom:8px;
 }
 
+
+/* FINAL MESSAGE */
+
 .final{
-  font-size:17px;
+  font-size:16px;
+  text-align:left;
 }
+
+.final-box{
+
+  margin-top:15px;
+
+  padding:19px 17px;
+
+  background:#fffaf5;
+
+  border:1px solid #e3d6cb;
+
+  border-radius:20px;
+
+  box-shadow:
+    0 8px 20px rgba(80,50,40,.08);
+
+  text-align:center;
+
+  position:relative;
+}
+
+.final-box:after{
+  content:"";
+
+  position:absolute;
+
+  left:15px;
+  right:15px;
+  bottom:-6px;
+
+  height:1px;
+
+  background:#d8c8bc;
+}
+
+
+/* RESPONSE */
 
 .small{
   font-size:15px;
+
+  line-height:1.6;
+
   font-weight:bold;
-  margin-top:18px;
+
+  margin-top:17px;
 }
 
 .success{
@@ -87,121 +282,267 @@ button.alt{
 }
 
 @keyframes pop{
-  0%{transform:scale(.7);opacity:0}
-  100%{transform:scale(1);opacity:1}
+
+  0%{
+    transform:scale(.75);
+    opacity:0;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:1;
+  }
+
 }
+
+
+/* HIDDEN */
+
+.hidden{
+  display:none;
+}
+
+
+/* MOBILE */
+
+@media(max-height:650px){
+
+  body{
+    align-items:flex-start;
+  }
+
+  .card{
+    margin:10px 0;
+    max-height:96vh;
+  }
+
+}
+
 </style>
 </head>
+
 
 <body>
 
 <div class="card">
 
-  <!-- START -->
-  <div id="screen1">
-    <div class="heart">Sorry 😭</div>
-
-    <h1>Ek Chhota Sa Mission...</h1>
-
-    <p>
-      Mujhe tumse ek baat kehni hai.<br>
-      Bas <b>3 levels</b> complete karne hain. 👀
-    </p>
-
-    <button onclick="show(2)">
-      Start Mission 🚀
-    </button>
-  </div>
+<div class="top-line"></div>
 
 
-  <!-- LEVEL 1 -->
-  <div id="screen2" class="hidden">
+<!-- START -->
 
-    <div class="progress">LEVEL 1 / 3</div>
+<div id="screen1">
 
-    <h1>Honest Answer 👀</h1>
+  <div class="heart">🥹</div>
+
+  <h1>Ek Chhota Sa Mission</h1>
+
+  <div class="question-box">
 
     <p>
-      Agar koi tumhein hurt kar de aur phir genuinely regret kare...
+      Mujhe tumse ek baat kehni hai.
+      <br><br>
+      Bas kuch chhote se tests hain.
+      <br>
+      Agar tumne sab complete kar liye...
+      <br><br>
+      <b>phir asal baat bataunga. 👀</b>
     </p>
-
-    <button onclick="show(3)">
-      Usay ek chance 😭
-    </button>
-
-    <button class="alt" onclick="show(3)">
-      Pehle thora attitude 😑
-    </button>
 
   </div>
 
+  <button onclick="show(2)">
+    Start Mission ✨
+  </button>
 
-  <!-- LEVEL 2 -->
-  <div id="screen3" class="hidden">
+</div>
 
-    <div class="progress">LEVEL 2 / 3</div>
 
-    <h1>Important Question 💭</h1>
+
+<!-- TEST 1 -->
+
+<div id="screen2" class="hidden">
+
+  <div class="progress">TEST 1 / 3</div>
+
+  <h1>Honest Test 👀</h1>
+
+  <div class="question-box">
 
     <p>
-      Kya ek sincere <b>"sorry"</b> kabhi kabhi
-      dil ki narazgi thori kam kar sakta hai?
+      Agar koi apni ghalti realize kare
+      aur genuinely sorry bole...
+      <br><br>
+
+      <b>
+      Kya usay ek chance milna chahiye?
+      </b>
     </p>
-
-    <button onclick="show(4)">
-      Haan 🥹
-    </button>
-
-    <button class="alt" onclick="show(4)">
-      Sochna padega 😭
-    </button>
 
   </div>
 
+  <button onclick="show(3)">
+    Haan 🥹
+  </button>
 
-  <!-- FINAL -->
-  <div id="screen4" class="hidden">
+  <button class="alt" onclick="show(3)">
+    Pehle thora attitude 😭
+  </button>
 
-    <div class="progress">FINAL LEVEL / 3</div>
+</div>
 
-    <h1>Okay... No More Games. ❤️‍🩹</h1>
+
+
+<!-- TEST 2 -->
+
+<div id="screen3" class="hidden">
+
+  <div class="progress">TEST 2 / 3</div>
+
+  <h1>Second Test 🖤</h1>
+
+  <div class="question-box">
+
+    <p>
+      Agar kisi ko apni ghalti ka
+      sach mein afsos ho...
+      <br><br>
+
+      aur woh bahana banane ke bajaye
+      sirf dil se sorry kahe...
+      <br><br>
+
+      <b>
+      Kya narazgi thori si kam ho sakti hai?
+      </b>
+    </p>
+
+  </div>
+
+  <button onclick="show(4)">
+    Shayad 🥹
+  </button>
+
+  <button class="alt" onclick="show(4)">
+    Abhi sochna hai 👀
+  </button>
+
+</div>
+
+
+
+<!-- TEST 3 -->
+
+<div id="screen4" class="hidden">
+
+  <div class="progress">FINAL TEST / 3</div>
+
+  <h1>Last Test ✨</h1>
+
+  <div class="question-box">
+
+    <p>
+      Agar koi tumhari narazgi ko samjhe,
+      <br>
+      tum par pressure na dale,
+      <br>
+      aur bas itna kahe:
+      <br><br>
+
+      <b>
+      "Mujhe genuinely afsos hai."
+      </b>
+      <br><br>
+
+      <b>
+      Kya uski sorry accept ki ja sakti hai?
+      </b>
+    </p>
+
+  </div>
+
+  <button onclick="show(5)">
+    Dekhte hain 🥹
+  </button>
+
+  <button class="alt" onclick="show(5)">
+    Abhi nahi 😭
+  </button>
+
+</div>
+
+
+
+<!-- FINAL SORRY -->
+
+<div id="screen5" class="hidden">
+
+  <div class="progress">MISSION COMPLETE ✨</div>
+
+  <h1>Okay... No More Games 👀</h1>
+
+  <div class="final-box">
 
     <p class="final">
 
-      Asal mein ye game sirf tum tak ek baat
-      pohanchane ka bahana tha.
+      Ye poora mission sirf ek baat
+      kehne ka bahana tha.
 
       <br><br>
 
-      <b>Mujhse ghalti hui, aur mujhe genuinely afsos hai.</b>
+      <b>Sorry — 1</b><br>
+      Mujhse ghalti hui. 🥹
 
       <br><br>
 
-      Main koi bahana nahi banaunga.
-      Bas dil se keh raha hoon:
+      <b>Sorry — 2</b><br>
+      Main us ghalti ko justify nahi karunga. 🖤
 
       <br><br>
 
-      <b>I'm really sorry. 😭❤️‍🩹</b>
+      <b>Sorry — 3</b><br>
+      Mujhe genuinely afsos hai. 😭
 
       <br><br>
 
-      Agar tum abhi naraz ho to main samajh sakta hoon...
-      bas umeed hai ek din tum mujhe maaf kar dogi. 🫂
+      <b>Sorry — 4</b><br>
+      Mera maqsad tumhein hurt karna nahi tha.
+
+      <br><br>
+
+      <b>Sorry — 5</b><br>
+      Bas dil se ek baar kehna tha...
+      <br><br>
+
+      <b>I'm really sorry. 🥹🖤</b>
+
+      <br><br>
+
+      Agar tum abhi naraz ho,
+      main samajh sakta hoon.
+      <br><br>
+
+      Bas umeed hai kabhi na kabhi
+      meri ye chhoti si sorry accept ho jayegi. ✨
 
     </p>
 
-    <button onclick="forgive()">
-      Maaf kiya 🥹💗
-    </button>
-
-    <button class="alt" onclick="notYet()">
-      Abhi nahi 😭
-    </button>
-
-    <p id="reply" class="small"></p>
-
   </div>
+
+
+  <button onclick="forgive()">
+    Maaf kiya 🥹💋
+  </button>
+
+  <button class="alt" onclick="notYet()">
+    Abhi nahi 😭
+  </button>
+
+
+  <p id="reply" class="small"></p>
+
+</div>
+
 
 </div>
 
@@ -210,43 +551,51 @@ button.alt{
 
 function show(n){
 
-  for(let i=1;i<=4;i++){
+  for(let i=1;i<=5;i++){
+
     document
       .getElementById("screen"+i)
       .classList.add("hidden");
+
   }
 
   document
     .getElementById("screen"+n)
     .classList.remove("hidden");
+
 }
 
 
 function forgive(){
 
-  const reply = document.getElementById("reply");
+  const reply =
+    document.getElementById("reply");
 
   reply.innerHTML =
-    "Thank you much Cute Prime Minister Saiba 😭💗<br><br>" +
-    "Mission Successful! 🥹❤️‍🩹";
+    "Thank you much Cute Prime Minister Saiba 🥹💋✨" +
+    "<br><br>" +
+    "Mission Successful 🖤";
 
   reply.classList.add("success");
+
 }
 
 
 function notYet(){
 
-  const reply = document.getElementById("reply");
+  const reply =
+    document.getElementById("reply");
 
   reply.innerHTML =
-    "Last time please... 🥺😭<br>" +
-    "Sach mein dil se sorry thi. ❤️‍🩹";
+    "Last time please... 🥹😭" +
+    "<br><br>" +
+    "Sach mein dil se sorry thi. 🖤";
 
   reply.classList.add("success");
+
 }
 
 </script>
 
 </body>
 </html>
-      
