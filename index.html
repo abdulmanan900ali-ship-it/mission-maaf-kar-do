@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,6 @@
 <title>Happy Birthday Meri Jaan 🖤</title>
 
 <style>
-
 *{
   box-sizing:border-box;
 }
@@ -16,36 +14,24 @@
 html,body{
   margin:0;
   width:100%;
-  height:100%;
+  min-height:100%;
 }
 
 body{
+  font-family:Arial,sans-serif;
   background:#050507;
   color:white;
-  font-family:Arial, sans-serif;
   overflow:hidden;
 }
-
-/* ================= BACKGROUND ================= */
 
 .page{
   position:fixed;
   inset:0;
-
   display:none;
-
   align-items:center;
   justify-content:center;
-
-  width:100%;
-  height:100%;
-
   padding:18px;
-
   overflow-y:auto;
-  overflow-x:hidden;
-
-  text-align:center;
 }
 
 .page.active{
@@ -55,866 +41,404 @@ body{
 .content{
   width:100%;
   max-width:440px;
-
+  text-align:center;
   margin:auto;
-
-  display:flex;
-  flex-direction:column;
-
-  align-items:center;
-  justify-content:center;
-
-  position:relative;
-  z-index:5;
 }
-
-/* ================= STARS ================= */
-
-.stars{
-  position:fixed;
-  inset:0;
-
-  z-index:0;
-
-  pointer-events:none;
-}
-
-.star{
-  position:absolute;
-
-  width:3px;
-  height:3px;
-
-  background:white;
-
-  border-radius:50%;
-
-  opacity:.5;
-
-  animation:twinkle 2s infinite alternate;
-}
-
-@keyframes twinkle{
-
-  from{
-    opacity:.15;
-  }
-
-  to{
-    opacity:1;
-  }
-
-}
-
-/* ================= TEXT ================= */
 
 h1{
-  font-size:32px;
+  font-size:30px;
   margin:12px 0;
 }
 
 h2{
-  font-size:25px;
+  font-size:24px;
 }
 
 .pink{
   color:#ff69b4;
-
-  text-shadow:
-  0 0 12px #ff3d96,
-  0 0 30px rgba(255,60,150,.4);
+  text-shadow:0 0 15px rgba(255,80,170,.6);
 }
 
 .subtitle{
   color:#ddd;
-
-  font-size:16px;
-
   line-height:1.7;
 }
 
 .line{
-  width:75px;
+  width:70px;
   height:2px;
-
-  margin:12px auto;
-
-  background:#ff5da8;
-
-  box-shadow:0 0 15px #ff5da8;
+  margin:14px auto;
+  background:#ff5ca8;
+  box-shadow:0 0 15px #ff5ca8;
 }
-
-/* ================= BUTTON ================= */
 
 button{
-
   border:0;
-
-  padding:14px 26px;
-
+  padding:13px 23px;
   margin:8px 4px;
-
   border-radius:30px;
-
-  background:
-  linear-gradient(
-    90deg,
-    #ff3f94,
-    #8844ff
-  );
-
+  background:linear-gradient(90deg,#ff3f94,#8746ff);
   color:white;
-
-  font-size:16px;
-
+  font-size:15px;
   font-weight:bold;
-
   cursor:pointer;
-
-  box-shadow:
-  0 8px 25px rgba(0,0,0,.35),
-  0 0 18px rgba(255,60,150,.2);
-
-  transition:.2s;
-}
-
-button:hover{
-  transform:translateY(-2px);
+  box-shadow:0 8px 22px rgba(0,0,0,.35);
 }
 
 button:active{
-  transform:scale(.95);
+  transform:scale(.96);
 }
 
-/* ================= MUSIC ================= */
+/* MUSIC */
 
 #musicButton{
-
   position:fixed;
-
-  top:15px;
-  right:15px;
-
+  top:14px;
+  right:14px;
   z-index:100;
-
-  padding:10px 16px;
-
   margin:0;
-
-  font-size:13px;
-
-  background:
-  rgba(30,30,35,.9);
-
-  border:
-  1px solid rgba(255,100,180,.45);
-
-  box-shadow:
-  0 0 15px rgba(255,70,160,.15);
+  padding:9px 14px;
+  font-size:12px;
+  background:#19151b;
+  border:1px solid #73405e;
 }
 
-/* ================= PAGE 1 ================= */
+/* STARS */
+
+.star{
+  position:fixed;
+  width:3px;
+  height:3px;
+  background:white;
+  border-radius:50%;
+  opacity:.5;
+  animation:twinkle 2s infinite alternate;
+  pointer-events:none;
+}
+
+@keyframes twinkle{
+  from{opacity:.15}
+  to{opacity:1}
+}
+
+/* INTRO */
 
 .sparkle{
   font-size:65px;
-
-  animation:
-  floating 2s infinite ease-in-out;
+  animation:float 2s infinite ease-in-out;
 }
 
-@keyframes floating{
-
-  50%{
-    transform:translateY(-10px);
-  }
-
+@keyframes float{
+  50%{transform:translateY(-10px)}
 }
 
 .name{
-
-  font-size:48px;
-
+  font-size:45px;
   font-weight:900;
-
   color:#ff69b5;
-
-  text-shadow:
-  0 0 12px #ff3d96,
-  0 0 35px rgba(255,60,150,.5);
-
+  text-shadow:0 0 15px #ff3d96;
 }
 
-/* ================= TEST ================= */
+/* TEST */
 
 .test-box{
-
   width:100%;
-
   padding:28px 22px;
-
   border-radius:26px;
-
-  background:
-  rgba(20,20,25,.96);
-
-  border:
-  1px solid rgba(255,100,180,.4);
-
-  box-shadow:
-  0 0 35px rgba(255,50,160,.12);
-
+  background:#141217;
+  border:1px solid #713f5d;
+  box-shadow:0 0 35px rgba(255,60,160,.12);
 }
 
 input{
-
   width:100%;
-
   padding:14px;
-
-  margin-top:15px;
-
   border-radius:14px;
-
   border:1px solid #444;
-
-  outline:none;
-
   background:#080808;
-
   color:white;
-
   text-align:center;
-
   font-size:16px;
-
+  outline:none;
 }
 
 .error{
-
-  min-height:22px;
-
+  min-height:24px;
   margin-top:8px;
-
   color:#ff72b8;
-
 }
 
-/* ================= AGE ================= */
+/* AGE */
 
 .big17{
-
-  font-size:110px;
-
-  line-height:1;
-
+  font-size:105px;
   font-weight:900;
-
   color:#ff69b5;
-
-  text-shadow:
-  0 0 15px #ff3d96,
-  0 0 40px rgba(255,60,150,.55);
-
-  animation:
-  numberGlow 2s infinite alternate;
-
-}
-
-@keyframes numberGlow{
-
-  from{
-    transform:scale(1);
-  }
-
-  to{
-    transform:scale(1.05);
-  }
-
+  line-height:1;
+  text-shadow:0 0 18px #ff3d96;
 }
 
 .age{
-
   display:inline-block;
-
   padding:9px 22px;
-
   border-radius:30px;
-
-  background:
-  linear-gradient(
-    90deg,
-    #ff3d91,
-    #8b42ff
-  );
-
+  background:linear-gradient(90deg,#ff3d91,#8742ff);
   font-weight:bold;
-
 }
 
-/* ==================================================
-   CAKE
-================================================== */
+/* CAKE */
 
-.cake-scene{
-
+.cake-area{
   position:relative;
-
-  width:360px;
-  height:380px;
-
-  margin:0 auto;
-
-  flex-shrink:0;
-
-}
-
-/* glow */
-
-.cake-glow{
-
-  position:absolute;
-
-  left:50%;
-  bottom:20px;
-
-  transform:translateX(-50%);
-
   width:330px;
-  height:55px;
-
-  border-radius:50%;
-
-  background:
-  radial-gradient(
-    ellipse,
-    rgba(255,80,160,.3),
-    transparent 70%
-  );
-
-  filter:blur(7px);
-
+  height:330px;
+  margin:5px auto;
 }
-
-/* plate */
 
 .plate{
-
   position:absolute;
-
   left:50%;
-  bottom:38px;
-
+  bottom:25px;
   transform:translateX(-50%);
-
-  width:315px;
-  height:28px;
-
+  width:300px;
+  height:27px;
   border-radius:50%;
-
-  background:
-  linear-gradient(
-    #fff,
-    #cfcfcf
-  );
-
-  box-shadow:
-  0 7px 18px rgba(0,0,0,.55);
-
+  background:linear-gradient(#fff,#bbb);
+  box-shadow:0 8px 20px rgba(0,0,0,.5);
 }
 
-/* cake */
-
-.cake-body{
-
+.cake{
   position:absolute;
-
   left:50%;
-  bottom:58px;
-
+  bottom:45px;
   transform:translateX(-50%);
-
-  width:270px;
-  height:170px;
-
-  border-radius:
-  22px 22px 28px 28px;
-
-  background:
-  linear-gradient(
+  width:255px;
+  height:155px;
+  border-radius:20px 20px 27px 27px;
+  background:linear-gradient(
     90deg,
-    #c93676,
-    #f46ca6,
-    #ff8abb,
-    #ed5b99,
-    #c92f72
+    #bd286c,
+    #f06aa3,
+    #ff91be,
+    #e75494,
+    #bd286c
   );
-
   box-shadow:
-  inset 0 -20px 0 rgba(100,15,55,.12),
-  inset 10px 0 20px rgba(255,255,255,.12),
-  0 18px 30px rgba(0,0,0,.4);
-
+    inset 0 -18px rgba(100,10,50,.15),
+    0 15px 30px rgba(0,0,0,.4);
 }
 
-/* frosting */
-
-.top-frosting{
-
+.frosting{
   position:absolute;
-
-  left:50%;
-  top:-31px;
-
-  transform:translateX(-50%);
-
-  width:270px;
-  height:65px;
-
+  top:-28px;
+  left:0;
+  width:255px;
+  height:58px;
   border-radius:50%;
-
-  background:
-  radial-gradient(
-    ellipse,
-    #fff,
-    #ffeaf2,
-    #ffc9dd
-  );
-
-  box-shadow:
-  0 6px 8px rgba(0,0,0,.18);
-
+  background:linear-gradient(#fff,#ffdbe9);
 }
-
-/* frosting drips */
 
 .drip{
-
   position:absolute;
-
-  background:#ffe8f1;
-
-  border-radius:
-  0 0 20px 20px;
-
+  background:#ffe4ef;
+  border-radius:0 0 18px 18px;
 }
 
-.drip1{
+.d1{
+  left:25px;
+  top:20px;
+  width:30px;
+  height:30px;
+}
 
-  left:30px;
-  top:18px;
+.d2{
+  left:88px;
+  top:24px;
+  width:28px;
+  height:32px;
+}
 
-  width:32px;
+.d3{
+  right:83px;
+  top:19px;
+  width:31px;
   height:35px;
-
 }
 
-.drip2{
-
-  left:92px;
-  top:25px;
-
+.d4{
+  right:25px;
+  top:24px;
   width:28px;
   height:30px;
-
 }
 
-.drip3{
+/* CLEAR 17 */
 
-  right:88px;
-  top:17px;
-
-  width:34px;
-  height:40px;
-
-}
-
-.drip4{
-
-  right:30px;
-  top:25px;
-
-  width:29px;
-  height:31px;
-
-}
-
-/* CLEAR 17 ON CAKE */
-
-.cake17{
-
+.cake-number{
   position:absolute;
-
   z-index:20;
-
   left:50%;
-  top:-9px;
-
+  top:-5px;
   transform:translateX(-50%);
-
-  width:110px;
-  height:65px;
-
+  width:100px;
+  height:62px;
   display:flex;
-
   align-items:center;
   justify-content:center;
-
   border-radius:50%;
-
-  background:rgba(255,255,255,.97);
-
+  background:#fff;
   color:#ff4f9e;
-
-  font-size:44px;
-
+  font-size:42px;
   font-weight:900;
-
   letter-spacing:3px;
-
-  text-shadow:
-  0 2px 2px rgba(120,20,70,.15),
-  0 0 10px rgba(255,70,160,.35);
-
-  box-shadow:
-  0 5px 12px rgba(90,20,60,.2);
-
+  text-shadow:0 2px 3px rgba(100,0,50,.15);
 }
-
-/* cream */
 
 .cream{
-
   position:absolute;
-
+  bottom:45px;
   left:0;
-  bottom:48px;
-
   width:100%;
-  height:17px;
-
-  background:#fff2f7;
-
+  height:15px;
+  background:#fff1f7;
   border-radius:50%;
-
 }
 
-/* dots */
-
-.dot{
-
-  position:absolute;
-
-  width:9px;
-  height:9px;
-
-  border-radius:50%;
-
-  background:#fff4f8;
-
-  bottom:23px;
-
-}
-
-.dot1{left:40px}
-.dot2{left:77px}
-.dot3{right:75px}
-.dot4{right:39px}
-
-/* candles */
+/* CANDLES */
 
 .candle{
-
   position:absolute;
-
-  z-index:30;
-
-  bottom:219px;
-
+  bottom:201px;
   width:14px;
-  height:58px;
-
+  height:54px;
   border-radius:5px;
-
-  background:
-  repeating-linear-gradient(
+  background:repeating-linear-gradient(
     -45deg,
-    #fff 0 7px,
-    #ff5fa8 7px 14px
+    white 0 7px,
+    #ff5ca5 7px 14px
   );
-
+  z-index:30;
 }
 
-.candle1{left:119px}
-.candle2{left:173px}
-.candle3{left:227px}
-
-/* flames */
+.c1{left:106px}
+.c2{left:158px}
+.c3{left:210px}
 
 .flame{
-
   position:absolute;
-
-  top:-28px;
-  left:-4px;
-
-  width:22px;
-  height:29px;
-
-  border-radius:
-  50% 50% 50% 0;
-
+  width:19px;
+  height:26px;
+  left:-3px;
+  top:-25px;
+  border-radius:50% 50% 50% 0;
   transform:rotate(45deg);
-
-  background:
-  radial-gradient(
-    circle at 50% 65%,
-    #fff 0 10%,
-    #ffd43b 22% 43%,
-    #ff7b22 55% 75%,
-    transparent 77%
-  );
-
-  filter:
-  drop-shadow(
-    0 0 7px #ff9c27
-  );
-
-  animation:
-  flicker .75s infinite alternate;
-
+  background:#ff9b25;
+  box-shadow:0 0 10px #ff9b25;
+  animation:flicker .6s infinite alternate;
 }
 
 @keyframes flicker{
-
-  from{
-    transform:rotate(43deg) scale(.92);
-  }
-
-  to{
-    transform:rotate(48deg) scale(1.1);
-  }
-
+  from{transform:rotate(43deg) scale(.9)}
+  to{transform:rotate(48deg) scale(1.1)}
 }
 
-/* cut */
-
 .cut-line{
-
   position:absolute;
-
   z-index:50;
-
   left:50%;
-  bottom:58px;
-
+  bottom:45px;
   width:5px;
-  height:170px;
-
+  height:155px;
   background:white;
-
-  transform:
-  translateX(-50%)
-  scaleY(0);
-
-  transform-origin:center;
-
+  transform:translateX(-50%) scaleY(0);
   opacity:0;
-
-  box-shadow:
-  0 0 8px white,
-  0 0 20px #ff6db2;
-
-  transition:
-  .8s ease;
-
+  box-shadow:0 0 15px #ff69b5;
+  transition:.7s;
 }
 
-.cake-scene.cut
-.cut-line{
-
+.cake-area.cut .cut-line{
+  transform:translateX(-50%) scaleY(1);
   opacity:1;
-
-  transform:
-  translateX(-50%)
-  scaleY(1);
-
 }
 
-.cake-scene.cut
-.flame{
-
+.cake-area.cut .flame{
   opacity:0;
-
 }
 
 .cut-message{
-
-  min-height:25px;
-
+  min-height:24px;
   color:#ff72b7;
-
   font-weight:bold;
-
 }
 
-/* ================= MESSAGE ================= */
+/* MESSAGE */
 
 .message-card{
-
   width:100%;
-
-  max-width:440px;
-
-  margin:0 auto;
-
-  padding:25px 21px;
-
-  border-radius:26px;
-
-  background:
-  linear-gradient(
-    145deg,
-    rgba(30,14,25,.98),
-    rgba(10,10,15,.98)
-  );
-
-  border:
-  1px solid rgba(255,100,180,.38);
-
-  box-shadow:
-  0 0 35px rgba(255,60,160,.12);
-
-  text-align:left;
-
-  line-height:1.8;
-
-  max-height:63vh;
-
+  max-height:62vh;
   overflow-y:auto;
-
-  scrollbar-width:thin;
-
+  padding:24px 20px;
+  border-radius:26px;
+  background:linear-gradient(145deg,#21151e,#0e0e12);
+  border:1px solid #703d5b;
+  text-align:left;
+  line-height:1.8;
 }
 
 .message-title{
-
   text-align:center;
-
   color:#ff69b4;
-
   font-size:25px;
-
   font-weight:bold;
-
-  margin-bottom:17px;
-
+  margin-bottom:15px;
 }
 
 .message-card p{
-
   color:#eee;
-
   font-size:15px;
-
-  margin:
-  0 0 17px;
-
+  margin-bottom:17px;
 }
 
-/* ================= BALLOONS ================= */
+/* BALLOONS */
 
 .balloon-area{
-
-  width:100%;
-
   display:flex;
-
-  align-items:flex-start;
-
   justify-content:center;
-
+  align-items:flex-start;
   flex-wrap:wrap;
-
-  gap:7px;
-
-  margin:25px auto 12px;
-
+  gap:8px;
+  margin:25px auto;
 }
 
 .balloon-wrap{
-
   position:relative;
-
-  width:62px;
-  height:140px;
-
+  width:58px;
+  height:125px;
 }
 
 .balloon{
-
-  width:58px;
-  height:76px;
-
-  border-radius:
-  50% 50% 45% 45%;
-
+  width:55px;
+  height:73px;
+  border-radius:50%;
   cursor:pointer;
-
   transition:.2s;
-
   box-shadow:
-  inset -10px -9px 16px rgba(0,0,0,.2),
-  inset 8px 7px 12px rgba(255,255,255,.12);
-
+    inset -9px -9px 14px rgba(0,0,0,.2),
+    inset 7px 6px 10px rgba(255,255,255,.15);
 }
 
 .balloon:hover{
-
-  transform:
-  translateY(-7px)
-  scale(1.05);
-
-}
-
-.balloon:before{
-
-  content:"";
-
-  position:absolute;
-
-  left:50%;
-  bottom:-5px;
-
-  transform:translateX(-50%);
-
-  width:9px;
-  height:8px;
-
-  background:inherit;
-
-  clip-path:
-  polygon(
-    0 0,
-    100% 0,
-    50% 100%
-  );
-
+  transform:translateY(-5px) scale(1.05);
 }
 
 .balloon:after{
-
   content:"";
-
   position:absolute;
-
   left:50%;
-  top:77px;
-
+  top:73px;
   width:1px;
-  height:63px;
-
+  height:50px;
   background:#999;
-
 }
 
 .b1{background:#e84c91}
@@ -923,213 +447,80 @@ input{
 .b4{background:#20a99b}
 .b5{background:#478bd8}
 
-.balloon-wrap.open
-.balloon{
-
-  animation:
-  pop .4s ease forwards;
-
+.balloon-wrap.open .balloon{
+  animation:pop .35s forwards;
 }
 
 @keyframes pop{
-
-  0%{
-    transform:scale(1);
-    opacity:1;
-  }
-
-  55%{
-    transform:scale(1.3);
-    opacity:.8;
-  }
-
-  100%{
-    transform:scale(0);
-    opacity:0;
-  }
-
+  0%{transform:scale(1);opacity:1}
+  60%{transform:scale(1.3);opacity:.7}
+  100%{transform:scale(0);opacity:0}
 }
 
-/* messages after balloons */
-
 #balloonMessages{
-
-  width:100%;
-
   display:none;
-
+  width:100%;
 }
 
 .mini-message{
-
-  width:100%;
-
-  padding:12px 15px;
-
+  padding:11px 14px;
   margin:7px 0;
-
   border-radius:15px;
-
-  background:
-  rgba(25,25,30,.94);
-
-  border:
-  1px solid rgba(255,100,180,.3);
-
-  color:#eee;
-
+  background:#19151b;
+  border:1px solid #60354f;
   font-size:14px;
-
 }
 
-/* ================= FINAL ================= */
+/* FINAL */
 
 .final-title{
-
-  font-size:46px;
-
-  color:#ff69b5;
-
+  font-size:45px;
   font-weight:bold;
-
-  text-shadow:
-  0 0 12px #ff3d96,
-  0 0 30px rgba(255,60,150,.4);
-
+  color:#ff69b5;
+  text-shadow:0 0 18px #ff3d96;
 }
 
 .final-card{
-
-  width:100%;
-
-  padding:23px;
-
-  border-radius:23px;
-
-  background:
-  rgba(20,20,25,.95);
-
-  border:
-  1px solid #444;
-
+  padding:22px;
+  border-radius:24px;
+  background:#161318;
+  border:1px solid #60354f;
   line-height:1.8;
-
 }
 
-.final-card p{
-
-  color:#eee;
-
-  font-size:15px;
-
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-height:720px){
-
-  .page{
-    padding:10px;
-  }
-
-  h1{
-    font-size:28px;
-  }
-
-  .cake-scene{
-
-    transform:scale(.80);
-
-    transform-origin:center;
-
-    margin-top:-20px;
-
-    margin-bottom:-55px;
-
+@media(max-height:700px){
+  .cake-area{
+    transform:scale(.78);
+    margin-top:-25px;
+    margin-bottom:-60px;
   }
 
   .message-card{
-
-    max-height:58vh;
-
+    max-height:57vh;
   }
-
 }
-
-@media(max-width:380px){
-
-  .content{
-    max-width:350px;
-  }
-
-  .cake-scene{
-
-    transform:scale(.70);
-
-    transform-origin:center;
-
-    margin-top:-30px;
-
-    margin-bottom:-95px;
-
-  }
-
-  .balloon-area{
-    gap:4px;
-  }
-
-  .balloon-wrap{
-    width:55px;
-  }
-
-  .balloon{
-    width:52px;
-    height:72px;
-  }
-
-}
-
 </style>
 </head>
 
-
 <body>
 
-
 <!-- MUSIC -->
-
 <audio id="bgMusic" loop preload="auto">
   <source src="Mananmp3.mp3" type="audio/mpeg">
 </audio>
 
-<button
-  id="musicButton"
-  onclick="toggleMusic()">
-
+<button id="musicButton" onclick="toggleMusic()">
   Play Music ✨
-
 </button>
 
 
-<!-- STARS -->
+<!-- PAGE 1 -->
 
-<div
-  class="stars"
-  id="stars">
-</div>
-
-
-<!-- ================= PAGE 1 ================= -->
-
-<section
-  class="page active"
-  id="page1">
+<section class="page active" id="page1">
 
   <div class="content">
 
-    <div class="sparkle">
-      ✨
-    </div>
+    <div class="sparkle">✨</div>
 
     <div class="line"></div>
 
@@ -1147,7 +538,7 @@ input{
       Something special is waiting for you... 👀
     </p>
 
-    <button onclick="go(2)">
+    <button onclick="goTo(2)">
       Start ✨
     </button>
 
@@ -1156,11 +547,9 @@ input{
 </section>
 
 
-<!-- ================= PAGE 2 ================= -->
+<!-- PAGE 2 -->
 
-<section
-  class="page"
-  id="page2">
+<section class="page" id="page2">
 
   <div class="content">
 
@@ -1173,29 +562,21 @@ input{
       <div class="line"></div>
 
       <p class="subtitle">
-
         Pehle secret answer do...
-
         <br><br>
-
         Tumhare liye sabse special word kya hai?
-
       </p>
 
       <input
         id="secret"
         placeholder="Type the secret..."
-        autocomplete="off"
       >
 
       <button onclick="unlock()">
         Unlock ✨
       </button>
 
-      <div
-        class="error"
-        id="error">
-      </div>
+      <div class="error" id="error"></div>
 
     </div>
 
@@ -1204,11 +585,9 @@ input{
 </section>
 
 
-<!-- ================= PAGE 3 ================= -->
+<!-- PAGE 3 -->
 
-<section
-  class="page"
-  id="page3">
+<section class="page" id="page3">
 
   <div class="content">
 
@@ -1217,15 +596,9 @@ input{
     </div>
 
     <h1>
-
       Happy Birthday
-
       <br>
-
-      <span class="pink">
-        Meri Jaan
-      </span>
-
+      <span class="pink">Meri Jaan</span>
     </h1>
 
     <div class="age">
@@ -1233,16 +606,12 @@ input{
     </div>
 
     <p class="subtitle">
-
       Aaj ka din tumhara hai...
-
       <br>
-
       aur celebration abhi baqi hai. 🥹
-
     </p>
 
-    <button onclick="go(4)">
+    <button onclick="goTo(4)">
       Cake Cutting ✨
     </button>
 
@@ -1251,112 +620,70 @@ input{
 </section>
 
 
-<!-- ================= PAGE 4 CAKE ================= -->
+<!-- PAGE 4 -->
 
-<section
-  class="page"
-  id="page4">
+<section class="page" id="page4">
 
   <div class="content">
 
-    <h1>
-      Cake Cutting Time ✨
-    </h1>
+    <h1>Cake Cutting Time ✨</h1>
 
     <p class="subtitle">
-
       Make a wish...
-
       <br>
-
       phir cake cut karte hain. 🥹
-
     </p>
 
-
-    <div
-      class="cake-scene"
-      id="cakeScene">
-
-      <div class="cake-glow"></div>
+    <div class="cake-area" id="cakeArea">
 
       <div class="plate"></div>
 
+      <div class="cake">
 
-      <div class="cake-body">
+        <div class="frosting">
 
-        <div class="top-frosting">
+          <div class="drip d1"></div>
+          <div class="drip d2"></div>
+          <div class="drip d3"></div>
+          <div class="drip d4"></div>
 
-          <div class="drip drip1"></div>
-
-          <div class="drip drip2"></div>
-
-          <div class="drip drip3"></div>
-
-          <div class="drip drip4"></div>
-
-
-          <div class="cake17">
+          <div class="cake-number">
             17
           </div>
 
         </div>
 
-
         <div class="cream"></div>
 
-
-        <div class="dot dot1"></div>
-
-        <div class="dot dot2"></div>
-
-        <div class="dot dot3"></div>
-
-        <div class="dot dot4"></div>
-
       </div>
 
-
-      <div class="candle candle1">
+      <div class="candle c1">
         <div class="flame"></div>
       </div>
 
-      <div class="candle candle2">
+      <div class="candle c2">
         <div class="flame"></div>
       </div>
 
-      <div class="candle candle3">
+      <div class="candle c3">
         <div class="flame"></div>
       </div>
-
 
       <div class="cut-line"></div>
 
     </div>
 
+    <div class="cut-message" id="cutMessage"></div>
 
-    <div
-      class="cut-message"
-      id="cutMessage">
-    </div>
-
-
-    <button
-      id="cutBtn"
-      onclick="cutCake()">
-
+    <button id="cutButton" onclick="cutCake()">
       Cut the Cake ✨
-
     </button>
 
-
     <button
-      id="messageBtn"
-      onclick="go(5)"
+      id="messageButton"
+      onclick="goTo(5)"
       style="display:none">
-
       Read a Little Message 👀
-
     </button>
 
   </div>
@@ -1364,26 +691,19 @@ input{
 </section>
 
 
-<!-- ================= PAGE 5 MESSAGE ================= -->
+<!-- PAGE 5 -->
 
-<section
-  class="page"
-  id="page5">
+<section class="page" id="page5">
 
   <div class="content">
 
     <h1>
-
       A Small Message
-
-      <span class="pink">
-        For You
-      </span>
-
+      <br>
+      <span class="pink">For You</span>
     </h1>
 
     <div class="line"></div>
-
 
     <div class="message-card">
 
@@ -1391,105 +711,71 @@ input{
         Meri Jaan ✨
       </div>
 
-
       <p>
-
         <b>
           Happy birthday meri jaan 🥹😭
         </b>
-
         <br><br>
-
-        Aaj tumhari life ka ek aur beautiful
-        year start ho raha hai.
-
+        Aaj tumhari life ka ek aur beautiful year
+        start ho raha hai.
       </p>
 
-
       <p>
-
         Es sal tumrha sath kuch acha hua hoga
         kuch bura hua hoga pr un sub baaton ko
         bhool kr aak niya sa start kro 😭
-
       </p>
 
-
       <p>
-
         Meri wish hai ke tumhara ye saal
         happiness, success aur beautiful memories
         se bhara ho. 🥹
-
       </p>
 
-
       <p>
-
         Jo dreams tumhare dil mein hain unke liye
         hamesha confident rehna Aur apni smile
         kabhi lose mat karna. ✨
-
       </p>
 
-
       <p>
-
         <b>
           Loveeeeee youuuuu sooooo muchhhhh
           Mariiiiiii Jannnnn 💋😭
         </b>
-
       </p>
 
-
       <p>
-
         <b>
           Happy 17th Birthday, Meri Jaan. 🖤
         </b>
-
       </p>
 
-
       <p>
-
         May this new chapter of your life bring you
         countless reasons to smile.
-
       </p>
 
-
       <p>
-
         This little website may end here,
         but your special day should keep going.
-
       </p>
 
-
       <p>
-
         Main zyda kuch ni kr skata tha,
         ya chota sa surprise ha.
-
         <br><br>
-
         Kashhhhhhhh Tum mera pass hoti to ma
         zyda kuch kr sakta tha but ab kia kr skata hian 😭
-
         <br><br>
-
         <b>
           Love you so much 💋🥹😭
         </b>
-
       </p>
 
     </div>
 
-
-    <button onclick="go(6)">
+    <button onclick="goTo(6)">
       Finally... ✨
     </button>
 
@@ -1498,124 +784,73 @@ input{
 </section>
 
 
-<!-- ================= PAGE 6 BALLOONS ================= -->
+<!-- PAGE 6 -->
 
-<section
-  class="page"
-  id="page6">
+<section class="page" id="page6">
 
   <div class="content">
 
     <h1>
-
       Finally...
-
       <br>
-
       Celebration Time ✨
-
     </h1>
 
     <p class="subtitle">
-
       Saare balloons pop karo...
-
       <br>
-
       phir chhote chhote messages aayenge. 👀
-
     </p>
-
 
     <div class="balloon-area">
 
-
       <div class="balloon-wrap">
-
-        <div
-          class="balloon b1"
-          onclick="openBalloon(this)">
-        </div>
-
+        <div class="balloon b1" onclick="openBalloon(this)"></div>
       </div>
 
-
       <div class="balloon-wrap">
-
-        <div
-          class="balloon b2"
-          onclick="openBalloon(this)">
-        </div>
-
+        <div class="balloon b2" onclick="openBalloon(this)"></div>
       </div>
 
-
       <div class="balloon-wrap">
-
-        <div
-          class="balloon b3"
-          onclick="openBalloon(this)">
-        </div>
-
+        <div class="balloon b3" onclick="openBalloon(this)"></div>
       </div>
 
-
       <div class="balloon-wrap">
-
-        <div
-          class="balloon b4"
-          onclick="openBalloon(this)">
-        </div>
-
+        <div class="balloon b4" onclick="openBalloon(this)"></div>
       </div>
 
-
       <div class="balloon-wrap">
-
-        <div
-          class="balloon b5"
-          onclick="openBalloon(this)">
-        </div>
-
+        <div class="balloon b5" onclick="openBalloon(this)"></div>
       </div>
-
 
     </div>
 
-
-    <div
-      id="balloonMessages">
-
+    <div id="balloonMessages">
 
       <div class="mini-message">
         Hamesha khush rehna 🥹
       </div>
 
-
       <div class="mini-message">
         Apni smile kabhi lose mat karna ✨
       </div>
-
 
       <div class="mini-message">
         Apne dreams ko hamesha follow karna 🖤
       </div>
 
-
       <div class="mini-message">
         Apna ye special day enjoy karna 😭
       </div>
-
 
       <div class="mini-message">
         17th year amazing ho ✨
       </div>
 
-
-      <button onclick="go(7)">
+      <button onclick="goTo(7)">
         One Last Thing ✨
       </button>
-
 
     </div>
 
@@ -1624,11 +859,9 @@ input{
 </section>
 
 
-<!-- ================= PAGE 7 FINAL ================= -->
+<!-- PAGE 7 -->
 
-<section
-  class="page"
-  id="page7">
+<section class="page" id="page7">
 
   <div class="content">
 
@@ -1636,11 +869,9 @@ input{
       Meri Jaan
     </div>
 
-
     <p class="subtitle">
       17 & Shining ✨
     </p>
-
 
     <div class="final-card">
 
@@ -1648,42 +879,29 @@ input{
         Happy Birthday ✨
       </h2>
 
-
       <p>
-
-        May this new chapter of your life
-        bring you countless reasons to smile.
-
+        May this new chapter of your life bring you
+        countless reasons to smile.
       </p>
 
-
       <p>
-
         Keep believing in yourself,
         keep chasing your dreams,
         and keep shining the way you do. 🥹
-
       </p>
 
-
       <p>
-
         This little website may end here,
         but your special day should keep going.
-
       </p>
 
-
       <p>
-
         <b>
           Happy 17th Birthday, Meri Jaan. 🖤✨
         </b>
-
       </p>
 
     </div>
-
 
     <button onclick="location.reload()">
       Start Again ✨
@@ -1696,70 +914,178 @@ input{
 
 <script>
 
-/* ================= STARS ================= */
+/* STARS */
 
-const stars =
-document.getElementById("stars");
+for(let i=0;i<100;i++){
 
-for(let i=0;i<120;i++){
-
-  const star =
-  document.createElement("div");
+  const star=document.createElement("div");
 
   star.className="star";
 
-  star.style.left =
-  Math.random()*100+"%";
+  star.style.left=Math.random()*100+"vw";
+  star.style.top=Math.random()*100+"vh";
+  star.style.animationDelay=Math.random()*2+"s";
 
-  star.style.top =
-  Math.random()*100+"%";
-
-  star.style.animationDelay =
-  Math.random()*2+"s";
-
-  stars.appendChild(star);
-
+  document.body.appendChild(star);
 }
 
 
-/* ================= MUSIC ================= */
+/* PAGE CHANGE */
 
-const music =
-document.getElementById("bgMusic");
+function goTo(number){
 
-const musicButton =
-document.getElementById("musicButton");
+  document
+    .querySelectorAll(".page")
+    .forEach(function(page){
+      page.classList.remove("active");
+    });
 
+  const target=document.getElementById("page"+number);
+
+  if(target){
+    target.classList.add("active");
+  }
+}
+
+
+/* SECRET */
+
+function unlock(){
+
+  const input=document
+    .getElementById("secret")
+    .value
+    .trim()
+    .toLowerCase();
+
+  const error=document
+    .getElementById("error");
+
+  if(
+    input==="meri jaan" ||
+    input==="jaan" ||
+    input==="17"
+  ){
+
+    error.textContent="";
+
+    goTo(3);
+
+  }else{
+
+    error.textContent=
+      "Hmm... phir se try karo 👀";
+
+  }
+}
+
+
+/* MUSIC */
 
 function toggleMusic(){
+
+  const music=document
+    .getElementById("bgMusic");
+
+  const button=document
+    .getElementById("musicButton");
 
   if(music.paused){
 
     music.play()
-    .then(function(){
+      .then(function(){
 
-      musicButton.textContent =
-      "Music On ✨";
+        button.textContent=
+          "Music On ✨";
 
-    })
-    .catch(function(){
+      })
+      .catch(function(){
 
-      musicButton.textContent =
-      "Play Music ✨";
+        button.textContent=
+          "Play Music ✨";
 
-    });
+      });
 
-  }
-
-  else{
+  }else{
 
     music.pause();
 
-   
+    button.textContent=
+      "Play Music ✨";
+
+  }
+}
 
 
+/* CAKE */
+
+function cutCake(){
+
+  const cake=document
+    .getElementById("cakeArea");
+
+  cake.classList.add("cut");
+
+  document
+    .getElementById("cutMessage")
+    .textContent=
+    "Cake officially cut! 🥹✨";
+
+  document
+    .getElementById("cutButton")
+    .style.display="none";
+
+  setTimeout(function(){
+
+    document
+      .getElementById("messageButton")
+      .style.display="inline-block";
+
+  },800);
+}
+
+
+/* BALLOONS */
+
+let opened=0;
+
+function openBalloon(balloon){
+
+  if(balloon.dataset.opened==="yes"){
+    return;
+  }
+
+  balloon.dataset.opened="yes";
+
+  const wrapper=balloon.parentElement;
+
+  wrapper.classList.add("open");
+
+  setTimeout(function(){
+
+    wrapper.style.display="none";
+
+    opened++;
+
+    if(opened===5){
+
+      document
+        .getElementById("balloonMessages")
+        .style.display="block";
+
+    }
+
+  },350);
+}
+
+</script>
+
+</body>
+  </html>
+              
     
 
+            
 
 
 <!-- TEST 3 -->
