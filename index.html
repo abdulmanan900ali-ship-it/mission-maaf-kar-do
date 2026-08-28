@@ -4,320 +4,334 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Happy Birthday Meri Jaan 🖤</title>
+<title>For Meri Jaan 🖤</title>
 
 <style>
 *{
-  box-sizing:border-box;
+    box-sizing:border-box;
 }
 
 html,body{
-  margin:0;
-  width:100%;
-  min-height:100%;
+    margin:0;
+    width:100%;
+    min-height:100%;
 }
 
 body{
-  font-family:Arial,sans-serif;
-  background:#050507;
-  color:white;
-  overflow:hidden;
+    font-family:Arial,sans-serif;
+    background:#050507;
+    color:#fff;
+    overflow:hidden;
 }
 
+/* PAGES */
+
 .page{
-  position:fixed;
-  inset:0;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:18px;
-  overflow-y:auto;
+    position:fixed;
+    inset:0;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:18px;
+    overflow-y:auto;
 }
 
 .page.active{
-  display:flex;
+    display:flex;
 }
 
 .content{
-  width:100%;
-  max-width:440px;
-  text-align:center;
-  margin:auto;
+    width:100%;
+    max-width:440px;
+    text-align:center;
+    margin:auto;
 }
 
+/* TEXT */
+
 h1{
-  font-size:30px;
-  margin:12px 0;
+    font-size:30px;
+    margin:12px 0;
 }
 
 h2{
-  font-size:24px;
+    font-size:24px;
 }
 
 .pink{
-  color:#ff69b4;
-  text-shadow:0 0 15px rgba(255,80,170,.6);
+    color:#ff69b4;
+    text-shadow:0 0 18px rgba(255,70,160,.7);
 }
 
 .subtitle{
-  color:#ddd;
-  line-height:1.7;
+    color:#ddd;
+    line-height:1.7;
 }
 
 .line{
-  width:70px;
-  height:2px;
-  margin:14px auto;
-  background:#ff5ca8;
-  box-shadow:0 0 15px #ff5ca8;
+    width:75px;
+    height:2px;
+    margin:15px auto;
+    background:#ff69b4;
+    box-shadow:0 0 15px #ff69b4;
 }
 
+/* BUTTON */
+
 button{
-  border:0;
-  padding:13px 23px;
-  margin:8px 4px;
-  border-radius:30px;
-  background:linear-gradient(90deg,#ff3f94,#8746ff);
-  color:white;
-  font-size:15px;
-  font-weight:bold;
-  cursor:pointer;
-  box-shadow:0 8px 22px rgba(0,0,0,.35);
+    border:0;
+    padding:13px 23px;
+    margin:8px 4px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#ff3f94,#8746ff);
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 8px 25px rgba(0,0,0,.4);
 }
 
 button:active{
-  transform:scale(.96);
+    transform:scale(.95);
+}
+
+.alt{
+    background:#1b171c;
+    border:1px solid #69415b;
 }
 
 /* MUSIC */
 
 #musicButton{
-  position:fixed;
-  top:14px;
-  right:14px;
-  z-index:100;
-  margin:0;
-  padding:9px 14px;
-  font-size:12px;
-  background:#19151b;
-  border:1px solid #73405e;
+    position:fixed;
+    top:14px;
+    right:14px;
+    z-index:999;
+    margin:0;
+    padding:9px 14px;
+    font-size:12px;
+    background:#19151b;
+    border:1px solid #70405c;
 }
 
 /* STARS */
 
 .star{
-  position:fixed;
-  width:3px;
-  height:3px;
-  background:white;
-  border-radius:50%;
-  opacity:.5;
-  animation:twinkle 2s infinite alternate;
-  pointer-events:none;
+    position:fixed;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    opacity:.5;
+    pointer-events:none;
+    animation:twinkle 2s infinite alternate;
 }
 
 @keyframes twinkle{
-  from{opacity:.15}
-  to{opacity:1}
+    from{opacity:.15}
+    to{opacity:1}
 }
 
 /* INTRO */
 
 .sparkle{
-  font-size:65px;
-  animation:float 2s infinite ease-in-out;
+    font-size:65px;
+    animation:float 2s infinite ease-in-out;
 }
 
 @keyframes float{
-  50%{transform:translateY(-10px)}
+    50%{
+        transform:translateY(-10px);
+    }
 }
 
 .name{
-  font-size:45px;
-  font-weight:900;
-  color:#ff69b5;
-  text-shadow:0 0 15px #ff3d96;
+    font-size:45px;
+    font-weight:900;
+    color:#ff69b5;
+    text-shadow:0 0 20px #ff3d96;
 }
 
-/* TEST */
+/* SECRET */
 
 .test-box{
-  width:100%;
-  padding:28px 22px;
-  border-radius:26px;
-  background:#141217;
-  border:1px solid #713f5d;
-  box-shadow:0 0 35px rgba(255,60,160,.12);
+    width:100%;
+    padding:28px 22px;
+    border-radius:27px;
+    background:linear-gradient(145deg,#21151e,#0d0d10);
+    border:1px solid #713f5d;
+    box-shadow:0 0 35px rgba(255,60,160,.12);
 }
 
 input{
-  width:100%;
-  padding:14px;
-  border-radius:14px;
-  border:1px solid #444;
-  background:#080808;
-  color:white;
-  text-align:center;
-  font-size:16px;
-  outline:none;
+    width:100%;
+    padding:14px;
+    border-radius:15px;
+    border:1px solid #444;
+    background:#080808;
+    color:white;
+    text-align:center;
+    font-size:16px;
+    outline:none;
 }
 
 .error{
-  min-height:24px;
-  margin-top:8px;
-  color:#ff72b8;
+    min-height:24px;
+    margin-top:8px;
+    color:#ff72b8;
 }
 
 /* AGE */
 
 .big17{
-  font-size:105px;
-  font-weight:900;
-  color:#ff69b5;
-  line-height:1;
-  text-shadow:0 0 18px #ff3d96;
+    font-size:110px;
+    font-weight:900;
+    line-height:1;
+    color:#ff69b5;
+    text-shadow:0 0 25px #ff3d96;
 }
 
 .age{
-  display:inline-block;
-  padding:9px 22px;
-  border-radius:30px;
-  background:linear-gradient(90deg,#ff3d91,#8742ff);
-  font-weight:bold;
+    display:inline-block;
+    padding:9px 22px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#ff3d91,#8742ff);
+    font-weight:bold;
 }
 
 /* CAKE */
 
 .cake-area{
-  position:relative;
-  width:330px;
-  height:330px;
-  margin:5px auto;
+    position:relative;
+    width:330px;
+    height:330px;
+    margin:0 auto;
 }
 
 .plate{
-  position:absolute;
-  left:50%;
-  bottom:25px;
-  transform:translateX(-50%);
-  width:300px;
-  height:27px;
-  border-radius:50%;
-  background:linear-gradient(#fff,#bbb);
-  box-shadow:0 8px 20px rgba(0,0,0,.5);
+    position:absolute;
+    left:50%;
+    bottom:25px;
+    transform:translateX(-50%);
+    width:300px;
+    height:27px;
+    border-radius:50%;
+    background:linear-gradient(#fff,#aaa);
+    box-shadow:0 8px 20px rgba(0,0,0,.5);
 }
 
 .cake{
-  position:absolute;
-  left:50%;
-  bottom:45px;
-  transform:translateX(-50%);
-  width:255px;
-  height:155px;
-  border-radius:20px 20px 27px 27px;
-  background:linear-gradient(
-    90deg,
-    #bd286c,
-    #f06aa3,
-    #ff91be,
-    #e75494,
-    #bd286c
-  );
-  box-shadow:
-    inset 0 -18px rgba(100,10,50,.15),
-    0 15px 30px rgba(0,0,0,.4);
+    position:absolute;
+    left:50%;
+    bottom:45px;
+    transform:translateX(-50%);
+    width:255px;
+    height:155px;
+    border-radius:20px 20px 27px 27px;
+    background:linear-gradient(
+        90deg,
+        #bd286c,
+        #f06aa3,
+        #ff91be,
+        #e75494,
+        #bd286c
+    );
+    box-shadow:
+        inset 0 -18px rgba(100,10,50,.15),
+        0 15px 30px rgba(0,0,0,.4);
 }
 
 .frosting{
-  position:absolute;
-  top:-28px;
-  left:0;
-  width:255px;
-  height:58px;
-  border-radius:50%;
-  background:linear-gradient(#fff,#ffdbe9);
+    position:absolute;
+    top:-28px;
+    left:0;
+    width:255px;
+    height:58px;
+    border-radius:50%;
+    background:linear-gradient(#fff,#ffdbe9);
 }
 
 .drip{
-  position:absolute;
-  background:#ffe4ef;
-  border-radius:0 0 18px 18px;
+    position:absolute;
+    background:#ffe4ef;
+    border-radius:0 0 18px 18px;
 }
 
 .d1{
-  left:25px;
-  top:20px;
-  width:30px;
-  height:30px;
+    left:25px;
+    top:20px;
+    width:30px;
+    height:30px;
 }
 
 .d2{
-  left:88px;
-  top:24px;
-  width:28px;
-  height:32px;
+    left:88px;
+    top:24px;
+    width:28px;
+    height:32px;
 }
 
 .d3{
-  right:83px;
-  top:19px;
-  width:31px;
-  height:35px;
+    right:83px;
+    top:19px;
+    width:31px;
+    height:35px;
 }
 
 .d4{
-  right:25px;
-  top:24px;
-  width:28px;
-  height:30px;
+    right:25px;
+    top:24px;
+    width:28px;
+    height:30px;
 }
 
-/* CLEAR 17 */
+/* 17 ON CAKE */
 
 .cake-number{
-  position:absolute;
-  z-index:20;
-  left:50%;
-  top:-5px;
-  transform:translateX(-50%);
-  width:100px;
-  height:62px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  background:#fff;
-  color:#ff4f9e;
-  font-size:42px;
-  font-weight:900;
-  letter-spacing:3px;
-  text-shadow:0 2px 3px rgba(100,0,50,.15);
+    position:absolute;
+    z-index:30;
+    left:50%;
+    top:-6px;
+    transform:translateX(-50%);
+    width:105px;
+    height:65px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:white;
+    color:#ff4f9e;
+    font-size:43px;
+    font-weight:900;
+    letter-spacing:3px;
 }
 
+/* CREAM */
+
 .cream{
-  position:absolute;
-  bottom:45px;
-  left:0;
-  width:100%;
-  height:15px;
-  background:#fff1f7;
-  border-radius:50%;
+    position:absolute;
+    bottom:45px;
+    left:0;
+    width:100%;
+    height:15px;
+    background:#fff1f7;
+    border-radius:50%;
 }
 
 /* CANDLES */
 
 .candle{
-  position:absolute;
-  bottom:201px;
-  width:14px;
-  height:54px;
-  border-radius:5px;
-  background:repeating-linear-gradient(
-    -45deg,
-    white 0 7px,
-    #ff5ca5 7px 14px
-  );
-  z-index:30;
+    position:absolute;
+    bottom:201px;
+    width:14px;
+    height:54px;
+    border-radius:5px;
+    background:repeating-linear-gradient(
+        -45deg,
+        white 0 7px,
+        #ff5ca5 7px 14px
+    );
+    z-index:40;
 }
 
 .c1{left:106px}
@@ -325,120 +339,126 @@ input{
 .c3{left:210px}
 
 .flame{
-  position:absolute;
-  width:19px;
-  height:26px;
-  left:-3px;
-  top:-25px;
-  border-radius:50% 50% 50% 0;
-  transform:rotate(45deg);
-  background:#ff9b25;
-  box-shadow:0 0 10px #ff9b25;
-  animation:flicker .6s infinite alternate;
+    position:absolute;
+    width:19px;
+    height:26px;
+    left:-3px;
+    top:-25px;
+    border-radius:50% 50% 50% 0;
+    transform:rotate(45deg);
+    background:#ff9b25;
+    box-shadow:0 0 12px #ff9b25;
+    animation:flicker .6s infinite alternate;
 }
 
 @keyframes flicker{
-  from{transform:rotate(43deg) scale(.9)}
-  to{transform:rotate(48deg) scale(1.1)}
+    from{
+        transform:rotate(43deg) scale(.9);
+    }
+    to{
+        transform:rotate(48deg) scale(1.1);
+    }
 }
 
+/* CUT */
+
 .cut-line{
-  position:absolute;
-  z-index:50;
-  left:50%;
-  bottom:45px;
-  width:5px;
-  height:155px;
-  background:white;
-  transform:translateX(-50%) scaleY(0);
-  opacity:0;
-  box-shadow:0 0 15px #ff69b5;
-  transition:.7s;
+    position:absolute;
+    z-index:50;
+    left:50%;
+    bottom:45px;
+    width:5px;
+    height:155px;
+    background:white;
+    transform:translateX(-50%) scaleY(0);
+    opacity:0;
+    box-shadow:0 0 15px #ff69b5;
+    transition:.7s;
 }
 
 .cake-area.cut .cut-line{
-  transform:translateX(-50%) scaleY(1);
-  opacity:1;
+    transform:translateX(-50%) scaleY(1);
+    opacity:1;
 }
 
 .cake-area.cut .flame{
-  opacity:0;
+    opacity:0;
 }
 
 .cut-message{
-  min-height:24px;
-  color:#ff72b7;
-  font-weight:bold;
+    min-height:25px;
+    color:#ff72b7;
+    font-weight:bold;
 }
 
 /* MESSAGE */
 
 .message-card{
-  width:100%;
-  max-height:62vh;
-  overflow-y:auto;
-  padding:24px 20px;
-  border-radius:26px;
-  background:linear-gradient(145deg,#21151e,#0e0e12);
-  border:1px solid #703d5b;
-  text-align:left;
-  line-height:1.8;
+    width:100%;
+    max-height:60vh;
+    overflow-y:auto;
+    padding:25px 20px;
+    border-radius:27px;
+    background:linear-gradient(145deg,#21151e,#0e0e12);
+    border:1px solid #703d5b;
+    text-align:left;
+    line-height:1.8;
 }
 
 .message-title{
-  text-align:center;
-  color:#ff69b4;
-  font-size:25px;
-  font-weight:bold;
-  margin-bottom:15px;
+    text-align:center;
+    color:#ff69b4;
+    font-size:25px;
+    font-weight:bold;
+    margin-bottom:15px;
 }
 
 .message-card p{
-  color:#eee;
-  font-size:15px;
-  margin-bottom:17px;
+    color:#eee;
+    font-size:15px;
+    margin-bottom:18px;
 }
 
 /* BALLOONS */
 
 .balloon-area{
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
-  flex-wrap:wrap;
-  gap:8px;
-  margin:25px auto;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:25px auto;
 }
 
 .balloon-wrap{
-  position:relative;
-  width:58px;
-  height:125px;
+    position:relative;
+    width:58px;
+    height:125px;
 }
 
 .balloon{
-  width:55px;
-  height:73px;
-  border-radius:50%;
-  cursor:pointer;
-  transition:.2s;
-  box-shadow:
-    inset -9px -9px 14px rgba(0,0,0,.2),
-    inset 7px 6px 10px rgba(255,255,255,.15);
+    width:55px;
+    height:73px;
+    border-radius:50%;
+    cursor:pointer;
+    transition:.2s;
+    box-shadow:
+        inset -9px -9px 14px rgba(0,0,0,.2),
+        inset 7px 6px 10px rgba(255,255,255,.15);
 }
 
 .balloon:hover{
-  transform:translateY(-5px) scale(1.05);
+    transform:translateY(-5px) scale(1.05);
 }
 
 .balloon:after{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:73px;
-  width:1px;
-  height:50px;
-  background:#999;
+    content:"";
+    position:absolute;
+    left:50%;
+    top:73px;
+    width:1px;
+    height:50px;
+    background:#999;
 }
 
 .b1{background:#e84c91}
@@ -448,56 +468,85 @@ input{
 .b5{background:#478bd8}
 
 .balloon-wrap.open .balloon{
-  animation:pop .35s forwards;
+    animation:pop .35s forwards;
 }
 
 @keyframes pop{
-  0%{transform:scale(1);opacity:1}
-  60%{transform:scale(1.3);opacity:.7}
-  100%{transform:scale(0);opacity:0}
+    0%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+    60%{
+        transform:scale(1.3);
+        opacity:.7;
+    }
+
+    100%{
+        transform:scale(0);
+        opacity:0;
+    }
 }
 
 #balloonMessages{
-  display:none;
-  width:100%;
+    display:none;
 }
 
 .mini-message{
-  padding:11px 14px;
-  margin:7px 0;
-  border-radius:15px;
-  background:#19151b;
-  border:1px solid #60354f;
-  font-size:14px;
+    padding:11px 14px;
+    margin:7px 0;
+    border-radius:15px;
+    background:#19151b;
+    border:1px solid #60354f;
+    font-size:14px;
 }
 
-/* FINAL */
+/* FINAL QUESTION */
 
-.final-title{
-  font-size:45px;
-  font-weight:bold;
-  color:#ff69b5;
-  text-shadow:0 0 18px #ff3d96;
+.question-card{
+    padding:27px 20px;
+    border-radius:27px;
+    background:linear-gradient(145deg,#21151e,#0e0e12);
+    border:1px solid #703d5b;
+    box-shadow:0 0 35px rgba(255,60,160,.12);
 }
 
-.final-card{
-  padding:22px;
-  border-radius:24px;
-  background:#161318;
-  border:1px solid #60354f;
-  line-height:1.8;
+.question{
+    font-size:22px;
+    line-height:1.7;
+}
+
+/* YES PAGE */
+
+.success{
+    font-size:32px;
+    color:#ff69b5;
+    text-shadow:0 0 18px #ff3d96;
+    font-weight:bold;
+    line-height:1.5;
+}
+
+/* NO PAGE */
+
+.no-message{
+    padding:25px 20px;
+    border-radius:27px;
+    background:#161318;
+    border:1px solid #60354f;
+    line-height:1.8;
 }
 
 @media(max-height:700px){
-  .cake-area{
-    transform:scale(.78);
-    margin-top:-25px;
-    margin-bottom:-60px;
-  }
 
-  .message-card{
-    max-height:57vh;
-  }
+    .cake-area{
+        transform:scale(.78);
+        margin-top:-30px;
+        margin-bottom:-65px;
+    }
+
+    .message-card{
+        max-height:55vh;
+    }
 }
 </style>
 </head>
@@ -505,12 +554,13 @@ input{
 <body>
 
 <!-- MUSIC -->
+
 <audio id="bgMusic" loop preload="auto">
-  <source src="Manan666.mp3" type="audio/mpeg">
+    <source src="Manan123.mp3" type="audio/mpeg">
 </audio>
 
 <button id="musicButton" onclick="toggleMusic()">
-  Play Music ✨
+    Play Music ✨
 </button>
 
 
@@ -518,31 +568,33 @@ input{
 
 <section class="page active" id="page1">
 
-  <div class="content">
+<div class="content">
 
-    <div class="sparkle">✨</div>
+    <div class="sparkle">👀🖤</div>
 
     <div class="line"></div>
 
     <p class="subtitle">
-      A little surprise made specially for
+        A little surprise made specially for
     </p>
 
     <div class="name">
-      Meri Jaan
+        Meri Jaan
     </div>
 
     <div class="line"></div>
 
     <p class="subtitle">
-      Something special is waiting for you... 👀
+        Bas ek chhota sa surprise hai...
+        <br>
+        end tak zaroor jana. 👀
     </p>
 
     <button onclick="goTo(2)">
-      Start ✨
+        Start ✨
     </button>
 
-  </div>
+</div>
 
 </section>
 
@@ -551,36 +603,36 @@ input{
 
 <section class="page" id="page2">
 
-  <div class="content">
+<div class="content">
 
-    <div class="test-box">
+<div class="test-box">
 
-      <h2>
-        Shhh... Ek Chhota Sa Test 👀
-      </h2>
+    <h2>
+        Shhh... Secret Test 👀
+    </h2>
 
-      <div class="line"></div>
+    <div class="line"></div>
 
-      <p class="subtitle">
-        Pehle secret answer do...
+    <p class="subtitle">
+        Pehle secret word enter karo.
         <br><br>
-        Tumhare liye sabse special word kya hai?
-      </p>
+        Hint: Tumhara special naam... 👀
+    </p>
 
-      <input
+    <input
         id="secret"
-        placeholder="Type the secret..."
-      >
+        placeholder="Secret word..."
+    >
 
-      <button onclick="unlock()">
+    <button onclick="unlock()">
         Unlock ✨
-      </button>
+    </button>
 
-      <div class="error" id="error"></div>
+    <div class="error" id="error"></div>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </section>
 
@@ -589,33 +641,35 @@ input{
 
 <section class="page" id="page3">
 
-  <div class="content">
+<div class="content">
 
     <div class="big17">
-      17
+        17
     </div>
 
     <h1>
-      Happy Birthday
-      <br>
-      <span class="pink">Meri Jaan</span>
+        Happy Birthday
+        <br>
+        <span class="pink">
+            Meri Jaan
+        </span>
     </h1>
 
     <div class="age">
-      17 & Shining ✨
+        17 & Shining ✨
     </div>
 
     <p class="subtitle">
-      Aaj ka din tumhara hai...
-      <br>
-      aur celebration abhi baqi hai. 🥹
+        Aaj ka din sirf tumhara hai.
+        <br>
+        Ab asli surprise start hota hai. 🥹
     </p>
 
     <button onclick="goTo(4)">
-      Cake Cutting ✨
+        Cake Cutting ✨
     </button>
 
-  </div>
+</div>
 
 </section>
 
@@ -624,69 +678,71 @@ input{
 
 <section class="page" id="page4">
 
-  <div class="content">
+<div class="content">
 
-    <h1>Cake Cutting Time ✨</h1>
+    <h1>
+        Cake Cutting ✨
+    </h1>
 
     <p class="subtitle">
-      Make a wish...
-      <br>
-      phir cake cut karte hain. 🥹
+        Make a wish...
+        <br>
+        phir cake cut karte hain. 🥹
     </p>
 
     <div class="cake-area" id="cakeArea">
 
-      <div class="plate"></div>
+        <div class="plate"></div>
 
-      <div class="cake">
+        <div class="cake">
 
-        <div class="frosting">
+            <div class="frosting">
 
-          <div class="drip d1"></div>
-          <div class="drip d2"></div>
-          <div class="drip d3"></div>
-          <div class="drip d4"></div>
+                <div class="drip d1"></div>
+                <div class="drip d2"></div>
+                <div class="drip d3"></div>
+                <div class="drip d4"></div>
 
-          <div class="cake-number">
-            17
-          </div>
+                <div class="cake-number">
+                    17
+                </div>
+
+            </div>
+
+            <div class="cream"></div>
 
         </div>
 
-        <div class="cream"></div>
+        <div class="candle c1">
+            <div class="flame"></div>
+        </div>
 
-      </div>
+        <div class="candle c2">
+            <div class="flame"></div>
+        </div>
 
-      <div class="candle c1">
-        <div class="flame"></div>
-      </div>
+        <div class="candle c3">
+            <div class="flame"></div>
+        </div>
 
-      <div class="candle c2">
-        <div class="flame"></div>
-      </div>
-
-      <div class="candle c3">
-        <div class="flame"></div>
-      </div>
-
-      <div class="cut-line"></div>
+        <div class="cut-line"></div>
 
     </div>
 
     <div class="cut-message" id="cutMessage"></div>
 
     <button id="cutButton" onclick="cutCake()">
-      Cut the Cake ✨
+        Cut the Cake ✨
     </button>
 
     <button
-      id="messageButton"
-      onclick="goTo(5)"
-      style="display:none">
-      Read a Little Message 👀
+        id="messageButton"
+        onclick="goTo(5)"
+        style="display:none">
+        Read Message 👀
     </button>
 
-  </div>
+</div>
 
 </section>
 
@@ -695,219 +751,289 @@ input{
 
 <section class="page" id="page5">
 
-  <div class="content">
+<div class="content">
 
     <h1>
-      A Small Message
-      <br>
-      <span class="pink">For You</span>
+        A Small Message
+        <br>
+        <span class="pink">
+            For You
+        </span>
     </h1>
 
     <div class="line"></div>
 
     <div class="message-card">
 
-      <div class="message-title">
-        Meri Jaan ✨
-      </div>
+        <div class="message-title">
+            Meri Jaan ✨
+        </div>
 
-      <p>
-        <b>
-          Happy birthday meri jaan 🥹😭
-        </b>
-        <br><br>
-        Aaj tumhari life ka ek aur beautiful year
-        start ho raha hai.
-      </p>
+        <p>
+            <b>
+                Happy birthday meri jaan 🥹😭
+            </b>
+            <br><br>
 
-      <p>
-        Es sal tumrha sath kuch acha hua hoga
-        kuch bura hua hoga pr un sub baaton ko
-        bhool kr aak niya sa start kro 😭
-      </p>
+            Aaj tumhari life ka ek aur beautiful year
+            start ho raha hai.
+        </p>
 
-      <p>
-        Meri wish hai ke tumhara ye saal
-        happiness, success aur beautiful memories
-        se bhara ho. 🥹
-      </p>
+        <p>
+            Es sal tumrha sath kuch acha hua hoga
+            kuch bura hua hoga pr un sub baaton ko
+            bhool kr aak niya sa start kro 😭
+        </p>
 
-      <p>
-        Jo dreams tumhare dil mein hain unke liye
-        hamesha confident rehna Aur apni smile
-        kabhi lose mat karna. ✨
-      </p>
+        <p>
+            Meri wish hai ke tumhara ye saal
+            happiness, success aur beautiful memories
+            se bhara ho. 🥹
+        </p>
 
-      <p>
-        <b>
-          Loveeeeee youuuuu sooooo muchhhhh
-          Mariiiiiii Jannnnn 💋😭
-        </b>
-      </p>
+        <p>
+            Jo dreams tumhare dil mein hain unke liye
+            hamesha confident rehna Aur apni smile
+            kabhi lose mat karna. ✨
+        </p>
 
-      <p>
-        <b>
-          Happy 17th Birthday, Meri Jaan. 🖤
-        </b>
-      </p>
+        <p>
+            <b>
+                Loveeeeee youuuuu sooooo muchhhhh
+                Mariiiiiii Jannnnn 💋😭
+            </b>
+        </p>
 
-      <p>
-        May this new chapter of your life bring you
-        countless reasons to smile.
-      </p>
+        <p>
+            <b>
+                Happy 17th Birthday, Meri Jaan. 🖤
+            </b>
+        </p>
 
-      <p>
-        This little website may end here,
-        but your special day should keep going.
-      </p>
+        <p>
+            May this new chapter of your life bring you
+            countless reasons to smile.
+        </p>
 
-      <p>
-        Main zyda kuch ni kr skata tha,
-        ya chota sa surprise ha.
-        <br><br>
-        Kashhhhhhhh Tum mera pass hoti to ma
-        zyda kuch kr sakta tha but ab kia kr skata hian 😭
-        <br><br>
-        <b>
-          Love you so much 💋🥹😭
-        </b>
-      </p>
+        <p>
+            This little website may end here,
+            but your special day should keep going.
+        </p>
+
+        <p>
+            Main zyda kuch ni kr skata tha,
+            ya chota sa surprise ha.
+            <br><br>
+
+            Kashhhhhhhh Tum mera pass hoti to ma
+            zyda kuch kr sakta tha but ab kia kr skata hian 😭
+
+            <br><br>
+
+            <b>
+                Love you so much 💋🥹😭
+            </b>
+        </p>
 
     </div>
 
     <button onclick="goTo(6)">
-      Finally... ✨
+        Next ✨
     </button>
 
-  </div>
+</div>
 
 </section>
 
 
-<!-- PAGE 6 -->
+<!-- PAGE 6 BALLOONS -->
 
 <section class="page" id="page6">
 
-  <div class="content">
+<div class="content">
 
     <h1>
-      Finally...
-      <br>
-      Celebration Time ✨
+        One More Thing ✨
     </h1>
 
     <p class="subtitle">
-      Saare balloons pop karo...
-      <br>
-      phir chhote chhote messages aayenge. 👀
+        Balloons pop karo...
+        <br>
+        phir chhote chhote messages aayenge. 👀
     </p>
 
     <div class="balloon-area">
 
-      <div class="balloon-wrap">
-        <div class="balloon b1" onclick="openBalloon(this)"></div>
-      </div>
+        <div class="balloon-wrap">
+            <div
+                class="balloon b1"
+                onclick="openBalloon(this)">
+            </div>
+        </div>
 
-      <div class="balloon-wrap">
-        <div class="balloon b2" onclick="openBalloon(this)"></div>
-      </div>
+        <div class="balloon-wrap">
+            <div
+                class="balloon b2"
+                onclick="openBalloon(this)">
+            </div>
+        </div>
 
-      <div class="balloon-wrap">
-        <div class="balloon b3" onclick="openBalloon(this)"></div>
-      </div>
+        <div class="balloon-wrap">
+            <div
+                class="balloon b3"
+                onclick="openBalloon(this)">
+            </div>
+        </div>
 
-      <div class="balloon-wrap">
-        <div class="balloon b4" onclick="openBalloon(this)"></div>
-      </div>
+        <div class="balloon-wrap">
+            <div
+                class="balloon b4"
+                onclick="openBalloon(this)">
+            </div>
+        </div>
 
-      <div class="balloon-wrap">
-        <div class="balloon b5" onclick="openBalloon(this)"></div>
-      </div>
+        <div class="balloon-wrap">
+            <div
+                class="balloon b5"
+                onclick="openBalloon(this)">
+            </div>
+        </div>
 
     </div>
 
     <div id="balloonMessages">
 
-      <div class="mini-message">
-        Hamesha khush rehna 🥹
-      </div>
+        <div class="mini-message">
+            Hamesha khush rehna 🥹
+        </div>
 
-      <div class="mini-message">
-        Apni smile kabhi lose mat karna ✨
-      </div>
+        <div class="mini-message">
+            Apni smile kabhi lose mat karna ✨
+        </div>
 
-      <div class="mini-message">
-        Apne dreams ko hamesha follow karna 🖤
-      </div>
+        <div class="mini-message">
+            Umeed krta hu ya sal acha gurza tumrha🖤
+        </div>
 
-      <div class="mini-message">
-        Apna ye special day enjoy karna 😭
-      </div>
+        <div class="mini-message">
+            Apna ye special day enjoy karna 😭
+        </div>
 
-      <div class="mini-message">
-        17th year amazing ho ✨
-      </div>
+        <div class="mini-message">
+            Main hamesha tumhra rhu ga 😭
+        </div>
 
-      <button onclick="goTo(7)">
-        One Last Thing ✨
-      </button>
+        <button onclick="goTo(7)">
+            Next ✨
+        </button>
 
     </div>
 
-  </div>
+</div>
 
 </section>
 
 
-<!-- PAGE 7 -->
+<!-- PAGE 7 QUESTION -->
 
 <section class="page" id="page7">
 
-  <div class="content">
+<div class="content">
 
-    <div class="final-title">
-      Meri Jaan
+    <div class="question-card">
+
+        <div class="pink" style="font-size:34px;">
+            Mohtarma 👀
+        </div>
+
+        <div class="line"></div>
+
+        <div class="question">
+            Kia apko chota sa surprise
+            pasand aya 👉🏻👈🏻🥹
+        </div>
+
+        <br>
+
+        <button onclick="yesAnswer()">
+            YES 🥹
+        </button>
+
+        <button class="alt" onclick="noAnswer()">
+            NO 😭
+        </button>
+
     </div>
+
+</div>
+
+</section>
+
+
+<!-- PAGE 8 YES -->
+
+<section class="page" id="page8">
+
+<div class="content">
+
+    <div class="success">
+        Awwwww 🥹
+        <br><br>
+
+        Thank you so much
+        <br>
+        cutee prime minister saiba 😭
+        <br><br>
+
+        Loveee youuu sooo muchhh
+        💋😭😭
+    </div>
+
+    <div class="line"></div>
 
     <p class="subtitle">
-      17 & Shining ✨
+        Tumhara YES hi mere liye enough hai. 🖤
     </p>
 
-    <div class="final-card">
+    <button onclick="restart()">
+        Start Again
+    </button>
 
-      <h2 class="pink">
-        Happy Birthday ✨
-      </h2>
+</div>
 
-      <p>
-        May this new chapter of your life bring you
-        countless reasons to smile.
-      </p>
+</section>
 
-      <p>
-        Keep believing in yourself,
-        keep chasing your dreams,
-        and keep shining the way you do. 🥹
-      </p>
 
-      <p>
-        This little website may end here,
-        but your special day should keep going.
-      </p>
+<!-- PAGE 9 NO -->
 
-      <p>
-        <b>
-          Happy 17th Birthday, Meri Jaan. 🖤✨
-        </b>
-      </p>
+<section class="page" id="page9">
+
+<div class="content">
+
+    <div class="no-message">
+
+        <h2 class="pink">
+            Achaaaa 😭
+        </h2>
+
+        <p>
+            Itni mehnat ki hai...
+            <br><br>
+
+            Yes krdo na please 😭
+            <br><br>
+
+            Ek baar phir soch lo
+            👉🏻👈🏻🥹
+        </p>
+
+        <button onclick="yesAnswer()">
+            Theek hai YES 🥹
+        </button>
 
     </div>
 
-    <button onclick="location.reload()">
-      Start Again ✨
-    </button>
-
-  </div>
+</div>
 
 </section>
 
@@ -918,65 +1044,70 @@ input{
 
 for(let i=0;i<100;i++){
 
-  const star=document.createElement("div");
+    const star=document.createElement("div");
 
-  star.className="star";
+    star.className="star";
 
-  star.style.left=Math.random()*100+"vw";
-  star.style.top=Math.random()*100+"vh";
-  star.style.animationDelay=Math.random()*2+"s";
+    star.style.left=
+        Math.random()*100+"vw";
 
-  document.body.appendChild(star);
+    star.style.top=
+        Math.random()*100+"vh";
+
+    star.style.animationDelay=
+        Math.random()*2+"s";
+
+    document.body.appendChild(star);
 }
 
 
-/* PAGE CHANGE */
+/* PAGE SYSTEM */
 
 function goTo(number){
 
-  document
-    .querySelectorAll(".page")
-    .forEach(function(page){
-      page.classList.remove("active");
-    });
+    document
+        .querySelectorAll(".page")
+        .forEach(function(page){
 
-  const target=document.getElementById("page"+number);
+            page.classList.remove("active");
 
-  if(target){
-    target.classList.add("active");
-  }
+        });
+
+    const target=
+        document.getElementById("page"+number);
+
+    if(target){
+        target.classList.add("active");
+    }
 }
 
 
-/* SECRET */
+/* SECRET WORD */
 
 function unlock(){
 
-  const input=document
-    .getElementById("secret")
-    .value
-    .trim()
-    .toLowerCase();
+    const input=
+        document
+        .getElementById("secret")
+        .value
+        .trim()
+        .toLowerCase();
 
-  const error=document
-    .getElementById("error");
+    const error=
+        document.getElementById("error");
 
-  if(
-    input==="meri jaan" ||
-    input==="jaan" ||
-    input==="17"
-  ){
+    if(input==="mera bachawww"){
 
-    error.textContent="";
+        error.textContent="";
 
-    goTo(3);
+        goTo(3);
 
-  }else{
+    }else{
 
-    error.textContent=
-      "Hmm... phir se try karo 👀";
+        error.textContent=
+            "Wrong answer... phir se try karo 👀";
 
-  }
+    }
 }
 
 
@@ -984,36 +1115,35 @@ function unlock(){
 
 function toggleMusic(){
 
-  const music=document
-    .getElementById("bgMusic");
+    const music=
+        document.getElementById("bgMusic");
 
-  const button=document
-    .getElementById("musicButton");
+    const button=
+        document.getElementById("musicButton");
 
-  if(music.paused){
+    if(music.paused){
 
-    music.play()
-      .then(function(){
+        music.play()
+        .then(function(){
+
+            button.textContent=
+                "Music On ✨";
+
+        })
+        .catch(function(){
+
+            button.textContent=
+                "Play Music ✨";
+
+        });
+
+    }else{
+
+        music.pause();
 
         button.textContent=
-          "Music On ✨";
-
-      })
-      .catch(function(){
-
-        button.textContent=
-          "Play Music ✨";
-
-      });
-
-  }else{
-
-    music.pause();
-
-    button.textContent=
-      "Play Music ✨";
-
-  }
+            "Play Music ✨";
+    }
 }
 
 
@@ -1021,27 +1151,27 @@ function toggleMusic(){
 
 function cutCake(){
 
-  const cake=document
-    .getElementById("cakeArea");
+    const cake=
+        document.getElementById("cakeArea");
 
-  cake.classList.add("cut");
-
-  document
-    .getElementById("cutMessage")
-    .textContent=
-    "Cake officially cut! 🥹✨";
-
-  document
-    .getElementById("cutButton")
-    .style.display="none";
-
-  setTimeout(function(){
+    cake.classList.add("cut");
 
     document
-      .getElementById("messageButton")
-      .style.display="inline-block";
+        .getElementById("cutMessage")
+        .textContent=
+        "Cake officially cut! 🥹✨";
 
-  },800);
+    document
+        .getElementById("cutButton")
+        .style.display="none";
+
+    setTimeout(function(){
+
+        document
+            .getElementById("messageButton")
+            .style.display="inline-block";
+
+    },800);
 }
 
 
@@ -1051,43 +1181,62 @@ let opened=0;
 
 function openBalloon(balloon){
 
-  if(balloon.dataset.opened==="yes"){
-    return;
-  }
-
-  balloon.dataset.opened="yes";
-
-  const wrapper=balloon.parentElement;
-
-  wrapper.classList.add("open");
-
-  setTimeout(function(){
-
-    wrapper.style.display="none";
-
-    opened++;
-
-    if(opened===5){
-
-      document
-        .getElementById("balloonMessages")
-        .style.display="block";
-
+    if(balloon.dataset.opened==="yes"){
+        return;
     }
 
-  },350);
+    balloon.dataset.opened="yes";
+
+    const wrapper=
+        balloon.parentElement;
+
+    wrapper.classList.add("open");
+
+    setTimeout(function(){
+
+        wrapper.style.display="none";
+
+        opened++;
+
+        if(opened===5){
+
+            document
+                .getElementById("balloonMessages")
+                .style.display="block";
+
+        }
+
+    },350);
+}
+
+
+/* YES */
+
+function yesAnswer(){
+
+    goTo(8);
+
+}
+
+
+/* NO */
+
+function noAnswer(){
+
+    goTo(9);
+
+}
+
+
+/* RESTART */
+
+function restart(){
+
+    location.reload();
+
 }
 
 </script>
 
 </body>
-  </html>
-              
-    
-
-            
-
-
-<!-- TEST 3 -->
-
-      
+</html>
