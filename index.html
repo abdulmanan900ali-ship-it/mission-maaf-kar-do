@@ -1,10 +1,11 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sorry from Assistant Sab</title>
+<title>Happy Birthday Meri Jaan 🖤</title>
 
 <style>
 
@@ -12,179 +13,167 @@
   box-sizing:border-box;
 }
 
-body{
+html,body{
   margin:0;
-  min-height:100vh;
-  display:flex;
+  width:100%;
+  height:100%;
+}
+
+body{
+  background:#050507;
+  color:white;
+  font-family:Arial, sans-serif;
+  overflow:hidden;
+}
+
+/* ================= BACKGROUND ================= */
+
+.page{
+  position:fixed;
+  inset:0;
+
+  display:none;
+
   align-items:center;
   justify-content:center;
+
+  width:100%;
+  height:100%;
+
   padding:18px;
 
-  font-family:Arial,sans-serif;
-  color:#30232a;
-
-  background:
-    linear-gradient(rgba(255,255,255,.72),rgba(255,255,255,.72)),
-    repeating-linear-gradient(
-      0deg,
-      #f4eee7 0px,
-      #f4eee7 31px,
-      #e5d9ce 32px
-    );
-
-  overflow:auto;
-}
-
-
-/* MAIN PAPER */
-
-.card{
-  width:min(405px,100%);
-  max-height:94vh;
   overflow-y:auto;
-
-  background:#fffdf9;
-
-  border-radius:8px;
-
-  padding:28px 21px 25px;
+  overflow-x:hidden;
 
   text-align:center;
+}
+
+.page.active{
+  display:flex;
+}
+
+.content{
+  width:100%;
+  max-width:440px;
+
+  margin:auto;
+
+  display:flex;
+  flex-direction:column;
+
+  align-items:center;
+  justify-content:center;
 
   position:relative;
-
-  border:1px solid #e4d9ce;
-
-  box-shadow:
-    0 14px 35px rgba(60,40,40,.16),
-    0 2px 5px rgba(60,40,40,.08);
-
-  transform:rotate(-.3deg);
+  z-index:5;
 }
 
+/* ================= STARS ================= */
 
-/* PAPER CORNER */
+.stars{
+  position:fixed;
+  inset:0;
 
-.card:before{
-  content:"";
+  z-index:0;
+
+  pointer-events:none;
+}
+
+.star{
   position:absolute;
-  top:0;
-  right:0;
 
-  width:0;
-  height:0;
-
-  border-top:42px solid #eadfd5;
-  border-left:42px solid transparent;
-}
-
-
-/* TOP LINE */
-
-.top-line{
-  width:75px;
+  width:3px;
   height:3px;
 
-  margin:0 auto 16px;
+  background:white;
 
-  background:#8c6876;
+  border-radius:50%;
 
-  border-radius:20px;
+  opacity:.5;
+
+  animation:twinkle 2s infinite alternate;
 }
 
+@keyframes twinkle{
 
-/* HEART */
-
-.heart{
-  font-size:48px;
-  animation:beat 1.3s infinite;
-}
-
-@keyframes beat{
-  50%{
-    transform:scale(1.12);
+  from{
+    opacity:.15;
   }
+
+  to{
+    opacity:1;
+  }
+
 }
 
-
-/* HEADINGS */
+/* ================= TEXT ================= */
 
 h1{
-  margin:8px 0 12px;
-  font-size:26px;
-  letter-spacing:.2px;
+  font-size:32px;
+  margin:12px 0;
 }
 
-p{
-  line-height:1.65;
-  font-size:15.5px;
+h2{
+  font-size:25px;
 }
 
+.pink{
+  color:#ff69b4;
 
-/* QUESTION BOX */
-
-.question-box{
-
-  margin:18px 0;
-
-  padding:17px 15px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255,245,248,.95),
-      rgba(248,242,255,.95)
-    );
-
-  border:1px dashed #b99baa;
-
-  border-radius:17px;
-
-  box-shadow:
-    inset 0 0 0 5px rgba(255,255,255,.55),
-    0 7px 18px rgba(90,50,70,.08);
-
-  position:relative;
+  text-shadow:
+  0 0 12px #ff3d96,
+  0 0 30px rgba(255,60,150,.4);
 }
 
-.question-box:before{
-  content:"";
-  position:absolute;
+.subtitle{
+  color:#ddd;
 
-  top:-7px;
-  left:25px;
+  font-size:16px;
 
-  width:42px;
-  height:13px;
-
-  background:#ead7df;
-
-  transform:rotate(-4deg);
-
-  opacity:.8;
+  line-height:1.7;
 }
 
+.line{
+  width:75px;
+  height:2px;
 
-/* BUTTONS */
+  margin:12px auto;
+
+  background:#ff5da8;
+
+  box-shadow:0 0 15px #ff5da8;
+}
+
+/* ================= BUTTON ================= */
 
 button{
+
   border:0;
 
-  border-radius:14px;
+  padding:14px 26px;
 
-  padding:12px 18px;
+  margin:8px 4px;
 
-  margin:6px 3px;
+  border-radius:30px;
 
-  font-size:15px;
-
-  cursor:pointer;
-
-  background:#725568;
+  background:
+  linear-gradient(
+    90deg,
+    #ff3f94,
+    #8844ff
+  );
 
   color:white;
 
-  box-shadow:0 6px 14px rgba(80,50,70,.15);
+  font-size:16px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  box-shadow:
+  0 8px 25px rgba(0,0,0,.35),
+  0 0 18px rgba(255,60,150,.2);
 
   transition:.2s;
 }
@@ -194,125 +183,908 @@ button:hover{
 }
 
 button:active{
-  transform:scale(.96);
+  transform:scale(.95);
 }
 
-button.alt{
-  background:#eee3e7;
-  color:#553d48;
+/* ================= MUSIC ================= */
+
+#musicButton{
+
+  position:fixed;
+
+  top:15px;
+  right:15px;
+
+  z-index:100;
+
+  padding:10px 16px;
+
+  margin:0;
+
+  font-size:13px;
+
+  background:
+  rgba(30,30,35,.9);
+
+  border:
+  1px solid rgba(255,100,180,.45);
+
+  box-shadow:
+  0 0 15px rgba(255,70,160,.15);
 }
 
+/* ================= PAGE 1 ================= */
 
-/* PROGRESS */
+.sparkle{
+  font-size:65px;
 
-.progress{
-  display:inline-block;
-
-  padding:6px 12px;
-
-  border-radius:20px;
-
-  background:#eee5e9;
-
-  color:#604753;
-
-  font-size:12px;
-
-  margin-bottom:8px;
+  animation:
+  floating 2s infinite ease-in-out;
 }
 
+@keyframes floating{
 
-/* FINAL MESSAGE */
+  50%{
+    transform:translateY(-10px);
+  }
 
-.final{
-  font-size:16px;
-  text-align:left;
 }
 
-.final-box{
+.name{
+
+  font-size:48px;
+
+  font-weight:900;
+
+  color:#ff69b5;
+
+  text-shadow:
+  0 0 12px #ff3d96,
+  0 0 35px rgba(255,60,150,.5);
+
+}
+
+/* ================= TEST ================= */
+
+.test-box{
+
+  width:100%;
+
+  padding:28px 22px;
+
+  border-radius:26px;
+
+  background:
+  rgba(20,20,25,.96);
+
+  border:
+  1px solid rgba(255,100,180,.4);
+
+  box-shadow:
+  0 0 35px rgba(255,50,160,.12);
+
+}
+
+input{
+
+  width:100%;
+
+  padding:14px;
 
   margin-top:15px;
 
-  padding:19px 17px;
+  border-radius:14px;
 
-  background:#fffaf5;
+  border:1px solid #444;
 
-  border:1px solid #e3d6cb;
+  outline:none;
 
-  border-radius:20px;
+  background:#080808;
 
-  box-shadow:
-    0 8px 20px rgba(80,50,40,.08);
+  color:white;
 
   text-align:center;
 
-  position:relative;
+  font-size:16px;
+
 }
 
-.final-box:after{
+.error{
+
+  min-height:22px;
+
+  margin-top:8px;
+
+  color:#ff72b8;
+
+}
+
+/* ================= AGE ================= */
+
+.big17{
+
+  font-size:110px;
+
+  line-height:1;
+
+  font-weight:900;
+
+  color:#ff69b5;
+
+  text-shadow:
+  0 0 15px #ff3d96,
+  0 0 40px rgba(255,60,150,.55);
+
+  animation:
+  numberGlow 2s infinite alternate;
+
+}
+
+@keyframes numberGlow{
+
+  from{
+    transform:scale(1);
+  }
+
+  to{
+    transform:scale(1.05);
+  }
+
+}
+
+.age{
+
+  display:inline-block;
+
+  padding:9px 22px;
+
+  border-radius:30px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #ff3d91,
+    #8b42ff
+  );
+
+  font-weight:bold;
+
+}
+
+/* ==================================================
+   CAKE
+================================================== */
+
+.cake-scene{
+
+  position:relative;
+
+  width:360px;
+  height:380px;
+
+  margin:0 auto;
+
+  flex-shrink:0;
+
+}
+
+/* glow */
+
+.cake-glow{
+
+  position:absolute;
+
+  left:50%;
+  bottom:20px;
+
+  transform:translateX(-50%);
+
+  width:330px;
+  height:55px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    ellipse,
+    rgba(255,80,160,.3),
+    transparent 70%
+  );
+
+  filter:blur(7px);
+
+}
+
+/* plate */
+
+.plate{
+
+  position:absolute;
+
+  left:50%;
+  bottom:38px;
+
+  transform:translateX(-50%);
+
+  width:315px;
+  height:28px;
+
+  border-radius:50%;
+
+  background:
+  linear-gradient(
+    #fff,
+    #cfcfcf
+  );
+
+  box-shadow:
+  0 7px 18px rgba(0,0,0,.55);
+
+}
+
+/* cake */
+
+.cake-body{
+
+  position:absolute;
+
+  left:50%;
+  bottom:58px;
+
+  transform:translateX(-50%);
+
+  width:270px;
+  height:170px;
+
+  border-radius:
+  22px 22px 28px 28px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #c93676,
+    #f46ca6,
+    #ff8abb,
+    #ed5b99,
+    #c92f72
+  );
+
+  box-shadow:
+  inset 0 -20px 0 rgba(100,15,55,.12),
+  inset 10px 0 20px rgba(255,255,255,.12),
+  0 18px 30px rgba(0,0,0,.4);
+
+}
+
+/* frosting */
+
+.top-frosting{
+
+  position:absolute;
+
+  left:50%;
+  top:-31px;
+
+  transform:translateX(-50%);
+
+  width:270px;
+  height:65px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    ellipse,
+    #fff,
+    #ffeaf2,
+    #ffc9dd
+  );
+
+  box-shadow:
+  0 6px 8px rgba(0,0,0,.18);
+
+}
+
+/* frosting drips */
+
+.drip{
+
+  position:absolute;
+
+  background:#ffe8f1;
+
+  border-radius:
+  0 0 20px 20px;
+
+}
+
+.drip1{
+
+  left:30px;
+  top:18px;
+
+  width:32px;
+  height:35px;
+
+}
+
+.drip2{
+
+  left:92px;
+  top:25px;
+
+  width:28px;
+  height:30px;
+
+}
+
+.drip3{
+
+  right:88px;
+  top:17px;
+
+  width:34px;
+  height:40px;
+
+}
+
+.drip4{
+
+  right:30px;
+  top:25px;
+
+  width:29px;
+  height:31px;
+
+}
+
+/* CLEAR 17 ON CAKE */
+
+.cake17{
+
+  position:absolute;
+
+  z-index:20;
+
+  left:50%;
+  top:-9px;
+
+  transform:translateX(-50%);
+
+  width:110px;
+  height:65px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:rgba(255,255,255,.97);
+
+  color:#ff4f9e;
+
+  font-size:44px;
+
+  font-weight:900;
+
+  letter-spacing:3px;
+
+  text-shadow:
+  0 2px 2px rgba(120,20,70,.15),
+  0 0 10px rgba(255,70,160,.35);
+
+  box-shadow:
+  0 5px 12px rgba(90,20,60,.2);
+
+}
+
+/* cream */
+
+.cream{
+
+  position:absolute;
+
+  left:0;
+  bottom:48px;
+
+  width:100%;
+  height:17px;
+
+  background:#fff2f7;
+
+  border-radius:50%;
+
+}
+
+/* dots */
+
+.dot{
+
+  position:absolute;
+
+  width:9px;
+  height:9px;
+
+  border-radius:50%;
+
+  background:#fff4f8;
+
+  bottom:23px;
+
+}
+
+.dot1{left:40px}
+.dot2{left:77px}
+.dot3{right:75px}
+.dot4{right:39px}
+
+/* candles */
+
+.candle{
+
+  position:absolute;
+
+  z-index:30;
+
+  bottom:219px;
+
+  width:14px;
+  height:58px;
+
+  border-radius:5px;
+
+  background:
+  repeating-linear-gradient(
+    -45deg,
+    #fff 0 7px,
+    #ff5fa8 7px 14px
+  );
+
+}
+
+.candle1{left:119px}
+.candle2{left:173px}
+.candle3{left:227px}
+
+/* flames */
+
+.flame{
+
+  position:absolute;
+
+  top:-28px;
+  left:-4px;
+
+  width:22px;
+  height:29px;
+
+  border-radius:
+  50% 50% 50% 0;
+
+  transform:rotate(45deg);
+
+  background:
+  radial-gradient(
+    circle at 50% 65%,
+    #fff 0 10%,
+    #ffd43b 22% 43%,
+    #ff7b22 55% 75%,
+    transparent 77%
+  );
+
+  filter:
+  drop-shadow(
+    0 0 7px #ff9c27
+  );
+
+  animation:
+  flicker .75s infinite alternate;
+
+}
+
+@keyframes flicker{
+
+  from{
+    transform:rotate(43deg) scale(.92);
+  }
+
+  to{
+    transform:rotate(48deg) scale(1.1);
+  }
+
+}
+
+/* cut */
+
+.cut-line{
+
+  position:absolute;
+
+  z-index:50;
+
+  left:50%;
+  bottom:58px;
+
+  width:5px;
+  height:170px;
+
+  background:white;
+
+  transform:
+  translateX(-50%)
+  scaleY(0);
+
+  transform-origin:center;
+
+  opacity:0;
+
+  box-shadow:
+  0 0 8px white,
+  0 0 20px #ff6db2;
+
+  transition:
+  .8s ease;
+
+}
+
+.cake-scene.cut
+.cut-line{
+
+  opacity:1;
+
+  transform:
+  translateX(-50%)
+  scaleY(1);
+
+}
+
+.cake-scene.cut
+.flame{
+
+  opacity:0;
+
+}
+
+.cut-message{
+
+  min-height:25px;
+
+  color:#ff72b7;
+
+  font-weight:bold;
+
+}
+
+/* ================= MESSAGE ================= */
+
+.message-card{
+
+  width:100%;
+
+  max-width:440px;
+
+  margin:0 auto;
+
+  padding:25px 21px;
+
+  border-radius:26px;
+
+  background:
+  linear-gradient(
+    145deg,
+    rgba(30,14,25,.98),
+    rgba(10,10,15,.98)
+  );
+
+  border:
+  1px solid rgba(255,100,180,.38);
+
+  box-shadow:
+  0 0 35px rgba(255,60,160,.12);
+
+  text-align:left;
+
+  line-height:1.8;
+
+  max-height:63vh;
+
+  overflow-y:auto;
+
+  scrollbar-width:thin;
+
+}
+
+.message-title{
+
+  text-align:center;
+
+  color:#ff69b4;
+
+  font-size:25px;
+
+  font-weight:bold;
+
+  margin-bottom:17px;
+
+}
+
+.message-card p{
+
+  color:#eee;
+
+  font-size:15px;
+
+  margin:
+  0 0 17px;
+
+}
+
+/* ================= BALLOONS ================= */
+
+.balloon-area{
+
+  width:100%;
+
+  display:flex;
+
+  align-items:flex-start;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:7px;
+
+  margin:25px auto 12px;
+
+}
+
+.balloon-wrap{
+
+  position:relative;
+
+  width:62px;
+  height:140px;
+
+}
+
+.balloon{
+
+  width:58px;
+  height:76px;
+
+  border-radius:
+  50% 50% 45% 45%;
+
+  cursor:pointer;
+
+  transition:.2s;
+
+  box-shadow:
+  inset -10px -9px 16px rgba(0,0,0,.2),
+  inset 8px 7px 12px rgba(255,255,255,.12);
+
+}
+
+.balloon:hover{
+
+  transform:
+  translateY(-7px)
+  scale(1.05);
+
+}
+
+.balloon:before{
+
   content:"";
 
   position:absolute;
 
-  left:15px;
-  right:15px;
-  bottom:-6px;
+  left:50%;
+  bottom:-5px;
 
-  height:1px;
+  transform:translateX(-50%);
 
-  background:#d8c8bc;
+  width:9px;
+  height:8px;
+
+  background:inherit;
+
+  clip-path:
+  polygon(
+    0 0,
+    100% 0,
+    50% 100%
+  );
+
 }
 
+.balloon:after{
 
-/* RESPONSE */
+  content:"";
 
-.small{
-  font-size:15px;
+  position:absolute;
 
-  line-height:1.6;
+  left:50%;
+  top:77px;
 
-  font-weight:bold;
+  width:1px;
+  height:63px;
 
-  margin-top:17px;
+  background:#999;
+
 }
 
-.success{
-  animation:pop .5s ease;
+.b1{background:#e84c91}
+.b2{background:#8054cc}
+.b3{background:#d69a2e}
+.b4{background:#20a99b}
+.b5{background:#478bd8}
+
+.balloon-wrap.open
+.balloon{
+
+  animation:
+  pop .4s ease forwards;
+
 }
 
 @keyframes pop{
 
   0%{
-    transform:scale(.75);
-    opacity:0;
-  }
-
-  100%{
     transform:scale(1);
     opacity:1;
   }
 
-}
-
-
-/* HIDDEN */
-
-.hidden{
-  display:none;
-}
-
-
-/* MOBILE */
-
-@media(max-height:650px){
-
-  body{
-    align-items:flex-start;
+  55%{
+    transform:scale(1.3);
+    opacity:.8;
   }
 
-  .card{
-    margin:10px 0;
-    max-height:96vh;
+  100%{
+    transform:scale(0);
+    opacity:0;
+  }
+
+}
+
+/* messages after balloons */
+
+#balloonMessages{
+
+  width:100%;
+
+  display:none;
+
+}
+
+.mini-message{
+
+  width:100%;
+
+  padding:12px 15px;
+
+  margin:7px 0;
+
+  border-radius:15px;
+
+  background:
+  rgba(25,25,30,.94);
+
+  border:
+  1px solid rgba(255,100,180,.3);
+
+  color:#eee;
+
+  font-size:14px;
+
+}
+
+/* ================= FINAL ================= */
+
+.final-title{
+
+  font-size:46px;
+
+  color:#ff69b5;
+
+  font-weight:bold;
+
+  text-shadow:
+  0 0 12px #ff3d96,
+  0 0 30px rgba(255,60,150,.4);
+
+}
+
+.final-card{
+
+  width:100%;
+
+  padding:23px;
+
+  border-radius:23px;
+
+  background:
+  rgba(20,20,25,.95);
+
+  border:
+  1px solid #444;
+
+  line-height:1.8;
+
+}
+
+.final-card p{
+
+  color:#eee;
+
+  font-size:15px;
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-height:720px){
+
+  .page{
+    padding:10px;
+  }
+
+  h1{
+    font-size:28px;
+  }
+
+  .cake-scene{
+
+    transform:scale(.80);
+
+    transform-origin:center;
+
+    margin-top:-20px;
+
+    margin-bottom:-55px;
+
+  }
+
+  .message-card{
+
+    max-height:58vh;
+
+  }
+
+}
+
+@media(max-width:380px){
+
+  .content{
+    max-width:350px;
+  }
+
+  .cake-scene{
+
+    transform:scale(.70);
+
+    transform-origin:center;
+
+    margin-top:-30px;
+
+    margin-bottom:-95px;
+
+  }
+
+  .balloon-area{
+    gap:4px;
+  }
+
+  .balloon-wrap{
+    width:55px;
+  }
+
+  .balloon{
+    width:52px;
+    height:72px;
   }
 
 }
@@ -323,278 +1095,673 @@ button.alt{
 
 <body>
 
-<div class="card">
 
-<div class="top-line"></div>
+<!-- MUSIC -->
+
+<audio id="bgMusic" loop preload="auto">
+  <source src="Mananmp3.mp3" type="audio/mpeg">
+</audio>
+
+<button
+  id="musicButton"
+  onclick="toggleMusic()">
+
+  Play Music ✨
+
+</button>
 
 
-<!-- START -->
+<!-- STARS -->
 
-<div id="screen1">
+<div
+  class="stars"
+  id="stars">
+</div>
 
-  <div class="heart">🥹</div>
 
-  <h1>Ek Chhota Sa Mission</h1>
+<!-- ================= PAGE 1 ================= -->
 
-  <div class="question-box">
+<section
+  class="page active"
+  id="page1">
 
-    <p>
-      Mujhe tumse ek baat kehni hai.
-      <br><br>
-      Bas kuch chhote se tests hain.
+  <div class="content">
+
+    <div class="sparkle">
+      ✨
+    </div>
+
+    <div class="line"></div>
+
+    <p class="subtitle">
+      A little surprise made specially for
+    </p>
+
+    <div class="name">
+      Meri Jaan
+    </div>
+
+    <div class="line"></div>
+
+    <p class="subtitle">
+      Something special is waiting for you... 👀
+    </p>
+
+    <button onclick="go(2)">
+      Start ✨
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PAGE 2 ================= -->
+
+<section
+  class="page"
+  id="page2">
+
+  <div class="content">
+
+    <div class="test-box">
+
+      <h2>
+        Shhh... Ek Chhota Sa Test 👀
+      </h2>
+
+      <div class="line"></div>
+
+      <p class="subtitle">
+
+        Pehle secret answer do...
+
+        <br><br>
+
+        Tumhare liye sabse special word kya hai?
+
+      </p>
+
+      <input
+        id="secret"
+        placeholder="Type the secret..."
+        autocomplete="off"
+      >
+
+      <button onclick="unlock()">
+        Unlock ✨
+      </button>
+
+      <div
+        class="error"
+        id="error">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PAGE 3 ================= -->
+
+<section
+  class="page"
+  id="page3">
+
+  <div class="content">
+
+    <div class="big17">
+      17
+    </div>
+
+    <h1>
+
+      Happy Birthday
+
       <br>
-      Agar tumne sab complete kar liye...
-      <br><br>
-      <b>phir asal baat bataunga. 👀</b>
+
+      <span class="pink">
+        Meri Jaan
+      </span>
+
+    </h1>
+
+    <div class="age">
+      17 & Shining ✨
+    </div>
+
+    <p class="subtitle">
+
+      Aaj ka din tumhara hai...
+
+      <br>
+
+      aur celebration abhi baqi hai. 🥹
+
     </p>
+
+    <button onclick="go(4)">
+      Cake Cutting ✨
+    </button>
 
   </div>
 
-  <button onclick="show(2)">
-    Start Mission ✨
-  </button>
-
-</div>
+</section>
 
 
+<!-- ================= PAGE 4 CAKE ================= -->
 
-<!-- TEST 1 -->
+<section
+  class="page"
+  id="page4">
 
-<div id="screen2" class="hidden">
+  <div class="content">
 
-  <div class="progress">TEST 1 / 3</div>
+    <h1>
+      Cake Cutting Time ✨
+    </h1>
 
-  <h1>Honest Test 👀</h1>
+    <p class="subtitle">
 
-  <div class="question-box">
+      Make a wish...
 
-    <p>
-      Agar koi apni ghalti realize kare
-      aur genuinely sorry bole...
-      <br><br>
+      <br>
 
-      <b>
-      Kya usay ek chance milna chahiye?
-      </b>
+      phir cake cut karte hain. 🥹
+
     </p>
+
+
+    <div
+      class="cake-scene"
+      id="cakeScene">
+
+      <div class="cake-glow"></div>
+
+      <div class="plate"></div>
+
+
+      <div class="cake-body">
+
+        <div class="top-frosting">
+
+          <div class="drip drip1"></div>
+
+          <div class="drip drip2"></div>
+
+          <div class="drip drip3"></div>
+
+          <div class="drip drip4"></div>
+
+
+          <div class="cake17">
+            17
+          </div>
+
+        </div>
+
+
+        <div class="cream"></div>
+
+
+        <div class="dot dot1"></div>
+
+        <div class="dot dot2"></div>
+
+        <div class="dot dot3"></div>
+
+        <div class="dot dot4"></div>
+
+      </div>
+
+
+      <div class="candle candle1">
+        <div class="flame"></div>
+      </div>
+
+      <div class="candle candle2">
+        <div class="flame"></div>
+      </div>
+
+      <div class="candle candle3">
+        <div class="flame"></div>
+      </div>
+
+
+      <div class="cut-line"></div>
+
+    </div>
+
+
+    <div
+      class="cut-message"
+      id="cutMessage">
+    </div>
+
+
+    <button
+      id="cutBtn"
+      onclick="cutCake()">
+
+      Cut the Cake ✨
+
+    </button>
+
+
+    <button
+      id="messageBtn"
+      onclick="go(5)"
+      style="display:none">
+
+      Read a Little Message 👀
+
+    </button>
 
   </div>
 
-  <button onclick="show(3)">
-    Haan 🥹
-  </button>
-
-  <button class="alt" onclick="show(3)">
-    Pehle thora attitude 😭
-  </button>
-
-</div>
+</section>
 
 
+<!-- ================= PAGE 5 MESSAGE ================= -->
 
-<!-- TEST 2 -->
+<section
+  class="page"
+  id="page5">
 
-<div id="screen3" class="hidden">
+  <div class="content">
 
-  <div class="progress">TEST 2 / 3</div>
+    <h1>
 
-  <h1>Second Test 🖤</h1>
+      A Small Message
 
-  <div class="question-box">
+      <span class="pink">
+        For You
+      </span>
 
-    <p>
-      Agar kisi ko apni ghalti ka
-      sach mein afsos ho...
-      <br><br>
+    </h1>
 
-      aur woh bahana banane ke bajaye
-      sirf dil se sorry kahe...
-      <br><br>
+    <div class="line"></div>
 
-      <b>
-      Kya narazgi thori si kam ho sakti hai?
-      </b>
-    </p>
+
+    <div class="message-card">
+
+      <div class="message-title">
+        Meri Jaan ✨
+      </div>
+
+
+      <p>
+
+        <b>
+          Happy birthday meri jaan 🥹😭
+        </b>
+
+        <br><br>
+
+        Aaj tumhari life ka ek aur beautiful
+        year start ho raha hai.
+
+      </p>
+
+
+      <p>
+
+        Es sal tumrha sath kuch acha hua hoga
+        kuch bura hua hoga pr un sub baaton ko
+        bhool kr aak niya sa start kro 😭
+
+      </p>
+
+
+      <p>
+
+        Meri wish hai ke tumhara ye saal
+        happiness, success aur beautiful memories
+        se bhara ho. 🥹
+
+      </p>
+
+
+      <p>
+
+        Jo dreams tumhare dil mein hain unke liye
+        hamesha confident rehna Aur apni smile
+        kabhi lose mat karna. ✨
+
+      </p>
+
+
+      <p>
+
+        <b>
+          Loveeeeee youuuuu sooooo muchhhhh
+          Mariiiiiii Jannnnn 💋😭
+        </b>
+
+      </p>
+
+
+      <p>
+
+        <b>
+          Happy 17th Birthday, Meri Jaan. 🖤
+        </b>
+
+      </p>
+
+
+      <p>
+
+        May this new chapter of your life bring you
+        countless reasons to smile.
+
+      </p>
+
+
+      <p>
+
+        This little website may end here,
+        but your special day should keep going.
+
+      </p>
+
+
+      <p>
+
+        Main zyda kuch ni kr skata tha,
+        ya chota sa surprise ha.
+
+        <br><br>
+
+        Kashhhhhhhh Tum mera pass hoti to ma
+        zyda kuch kr sakta tha but ab kia kr skata hian 😭
+
+        <br><br>
+
+        <b>
+          Love you so much 💋🥹😭
+        </b>
+
+      </p>
+
+    </div>
+
+
+    <button onclick="go(6)">
+      Finally... ✨
+    </button>
 
   </div>
 
-  <button onclick="show(4)">
-    Shayad 🥹
-  </button>
+</section>
 
-  <button class="alt" onclick="show(4)">
-    Abhi sochna hai 👀
-  </button>
 
-</div>
+<!-- ================= PAGE 6 BALLOONS ================= -->
+
+<section
+  class="page"
+  id="page6">
+
+  <div class="content">
+
+    <h1>
+
+      Finally...
+
+      <br>
+
+      Celebration Time ✨
+
+    </h1>
+
+    <p class="subtitle">
+
+      Saare balloons pop karo...
+
+      <br>
+
+      phir chhote chhote messages aayenge. 👀
+
+    </p>
+
+
+    <div class="balloon-area">
+
+
+      <div class="balloon-wrap">
+
+        <div
+          class="balloon b1"
+          onclick="openBalloon(this)">
+        </div>
+
+      </div>
+
+
+      <div class="balloon-wrap">
+
+        <div
+          class="balloon b2"
+          onclick="openBalloon(this)">
+        </div>
+
+      </div>
+
+
+      <div class="balloon-wrap">
+
+        <div
+          class="balloon b3"
+          onclick="openBalloon(this)">
+        </div>
+
+      </div>
+
+
+      <div class="balloon-wrap">
+
+        <div
+          class="balloon b4"
+          onclick="openBalloon(this)">
+        </div>
+
+      </div>
+
+
+      <div class="balloon-wrap">
+
+        <div
+          class="balloon b5"
+          onclick="openBalloon(this)">
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <div
+      id="balloonMessages">
+
+
+      <div class="mini-message">
+        Hamesha khush rehna 🥹
+      </div>
+
+
+      <div class="mini-message">
+        Apni smile kabhi lose mat karna ✨
+      </div>
+
+
+      <div class="mini-message">
+        Apne dreams ko hamesha follow karna 🖤
+      </div>
+
+
+      <div class="mini-message">
+        Apna ye special day enjoy karna 😭
+      </div>
+
+
+      <div class="mini-message">
+        17th year amazing ho ✨
+      </div>
+
+
+      <button onclick="go(7)">
+        One Last Thing ✨
+      </button>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PAGE 7 FINAL ================= -->
+
+<section
+  class="page"
+  id="page7">
+
+  <div class="content">
+
+    <div class="final-title">
+      Meri Jaan
+    </div>
+
+
+    <p class="subtitle">
+      17 & Shining ✨
+    </p>
+
+
+    <div class="final-card">
+
+      <h2 class="pink">
+        Happy Birthday ✨
+      </h2>
+
+
+      <p>
+
+        May this new chapter of your life
+        bring you countless reasons to smile.
+
+      </p>
+
+
+      <p>
+
+        Keep believing in yourself,
+        keep chasing your dreams,
+        and keep shining the way you do. 🥹
+
+      </p>
+
+
+      <p>
+
+        This little website may end here,
+        but your special day should keep going.
+
+      </p>
+
+
+      <p>
+
+        <b>
+          Happy 17th Birthday, Meri Jaan. 🖤✨
+        </b>
+
+      </p>
+
+    </div>
+
+
+    <button onclick="location.reload()">
+      Start Again ✨
+    </button>
+
+  </div>
+
+</section>
+
+
+<script>
+
+/* ================= STARS ================= */
+
+const stars =
+document.getElementById("stars");
+
+for(let i=0;i<120;i++){
+
+  const star =
+  document.createElement("div");
+
+  star.className="star";
+
+  star.style.left =
+  Math.random()*100+"%";
+
+  star.style.top =
+  Math.random()*100+"%";
+
+  star.style.animationDelay =
+  Math.random()*2+"s";
+
+  stars.appendChild(star);
+
+}
+
+
+/* ================= MUSIC ================= */
+
+const music =
+document.getElementById("bgMusic");
+
+const musicButton =
+document.getElementById("musicButton");
+
+
+function toggleMusic(){
+
+  if(music.paused){
+
+    music.play()
+    .then(function(){
+
+      musicButton.textContent =
+      "Music On ✨";
+
+    })
+    .catch(function(){
+
+      musicButton.textContent =
+      "Play Music ✨";
+
+    });
+
+  }
+
+  else{
+
+    music.pause();
+
+   
+
+
+    
 
 
 
 <!-- TEST 3 -->
 
-<div id="screen4" class="hidden">
-
-  <div class="progress">FINAL TEST / 3</div>
-
-  <h1>Last Test ✨</h1>
-
-  <div class="question-box">
-
-    <p>
-      Agar koi tumhari narazgi ko samjhe,
-      <br>
-      tum par pressure na dale,
-      <br>
-      aur bas itna kahe:
-      <br><br>
-
-      <b>
-      "Mujhe genuinely afsos hai."
-      </b>
-      <br><br>
-
-      <b>
-      Kya uski sorry accept ki ja sakti hai?
-      </b>
-    </p>
-
-  </div>
-
-  <button onclick="show(5)">
-    Dekhte hain 🥹
-  </button>
-
-  <button class="alt" onclick="show(5)">
-    Abhi nahi 😭
-  </button>
-
-</div>
-
-
-
-<!-- FINAL SORRY -->
-
-<div id="screen5" class="hidden">
-
-  <div class="progress">MISSION COMPLETE ✨</div>
-
-  <h1>Okay... No More Games 👀</h1>
-
-  <div class="final-box">
-
-    <p class="final">
-
-      Ye poora mission sirf ek baat
-      kehne ka bahana tha.
-
-      <br><br>
-
-      <b>Sorry — 1</b><br>
-      Mujhse ghalti hui. 🥹
-
-      <br><br>
-
-      <b>Sorry — 2</b><br>
-      Main us ghalti ko justify nahi karunga. 🖤
-
-      <br><br>
-
-      <b>Sorry — 3</b><br>
-      Mujhe genuinely afsos hai. 😭
-
-      <br><br>
-
-      <b>Sorry — 4</b><br>
-      Mera maqsad tumhein hurt karna nahi tha.
-
-      <br><br>
-
-      <b>Sorry — 5</b><br>
-      Bas dil se ek baar kehna tha...
-      <br><br>
-
-      <b>I'm really sorry. 🥹🖤</b>
-
-      <br><br>
-
-      Agar tum abhi naraz ho,
-      main samajh sakta hoon.
-      <br><br>
-
-      Bas umeed hai kabhi na kabhi
-      meri ye chhoti si sorry accept ho jayegi. ✨
-
-    </p>
-
-  </div>
-
-
-  <button onclick="forgive()">
-    Maaf kiya 🥹💋
-  </button>
-
-  <button class="alt" onclick="notYet()">
-    Abhi nahi 😭
-  </button>
-
-
-  <p id="reply" class="small"></p>
-
-</div>
-
-
-</div>
-
-
-<script>
-
-function show(n){
-
-  for(let i=1;i<=5;i++){
-
-    document
-      .getElementById("screen"+i)
-      .classList.add("hidden");
-
-  }
-
-  document
-    .getElementById("screen"+n)
-    .classList.remove("hidden");
-
-}
-
-
-function forgive(){
-
-  const reply =
-    document.getElementById("reply");
-
-  reply.innerHTML =
-    "Thank you much Cute Prime Minister Saiba 🥹💋✨" +
-    "<br><br>" +
-    "Mission Successful 🖤";
-
-  reply.classList.add("success");
-
-}
-
-
-function notYet(){
-
-  const reply =
-    document.getElementById("reply");
-
-  reply.innerHTML =
-    "Last time please... 🥹😭" +
-    "<br><br>" +
-    "Sach mein dil se sorry thi. 🖤";
-
-  reply.classList.add("success");
-
-}
-
-</script>
-
-</body>
-</html>
+      
